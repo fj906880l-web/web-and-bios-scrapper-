@@ -38,20 +38,21 @@ An automated public-records intelligence platform and anti-bot scanner evasion e
 
 Prevents automated scanners (Cloudflare Turnstile, DataDome, Akamai, PerimeterX, AWS WAF, and standard headless browser detectors) from flagging or blocking harvesting agents:
 
-* **DOM & Navigator Prototype Hardening:**
-  * Deletes `navigator.webdriver` from prototype chain and replaces with undefined getter.
-  * Overrides `navigator.permissions.query` to prevent notification permission leaks.
-  * Masks `navigator.plugins`, `navigator.languages`, `navigator.hardwareConcurrency`, and `navigator.deviceMemory`.
-  * Purges global automation symbols (`__webdriver_evaluate`, `_selenium`, `cdc_` and `$cdc_` Chrome driver tokens).
-* **Canvas & WebGL Fingerprint Noise:**
-  * Applies high-entropy 1-bit boundary noise to `HTMLCanvasElement.prototype.toDataURL` to break deterministic canvas fingerprinting.
-  * Spoofs WebGL unmasked vendor (`Google Inc. (Apple)`) and renderer (`ANGLE (Apple, Apple M2, OpenGL 4.1)`).
-* **Client-Hints & TLS Harmonization:**
-  * Synchronizes `Sec-CH-UA`, `Sec-CH-UA-Platform`, and `Sec-CH-UA-Mobile` with modern desktop browser signatures.
-* **Ergonomic Trajectories & Micro-Jitter:**
-  * Implements Gaussian request delays (`mean=2.5s`, `sigma=0.8s`) preventing behavioral pattern detection.
+- **DOM & Navigator Prototype Hardening:**
+  - Deletes `navigator.webdriver` from prototype chain and replaces with undefined getter.
+  - Overrides `navigator.permissions.query` to prevent notification permission leaks.
+  - Masks `navigator.plugins`, `navigator.languages`, `navigator.hardwareConcurrency`, and `navigator.deviceMemory`.
+  - Purges global automation symbols (`__webdriver_evaluate`, `_selenium`, `cdc_` and `$cdc_` Chrome driver tokens).
+- **Canvas & WebGL Fingerprint Noise:**
+  - Applies high-entropy 1-bit boundary noise to `HTMLCanvasElement.prototype.toDataURL` to break deterministic canvas fingerprinting.
+  - Spoofs WebGL unmasked vendor (`Google Inc. (Apple)`) and renderer (`ANGLE (Apple, Apple M2, OpenGL 4.1)`).
+- **Client-Hints & TLS Harmonization:**
+  - Synchronizes `Sec-CH-UA`, `Sec-CH-UA-Platform`, and `Sec-CH-UA-Mobile` with modern desktop browser signatures.
+- **Ergonomic Trajectories & Micro-Jitter:**
+  - Implements Gaussian request delays (`mean=2.5s`, `sigma=0.8s`) preventing behavioral pattern detection.
 
 ### Run Lumina Audit
+
 ```bash
 # Run 6-point anti-scanner evasion self-audit
 python3 scripts/lumina_stealth.py --audit
@@ -63,11 +64,12 @@ python3 scripts/lumina_stealth.py --audit
 
 Dedicated harvester for federal and state public corporate registrations and land registries:
 
-* **SEC EDGAR Company Intelligence:** Automatically indexes CIK corporate profiles, IRS EINs, SIC industry codes, and recent official filings (Form 4, 10-Q, 13F).
-* **State Corporate Registries:** Ingests Delaware Division of Corporations (ICIS) and Nevada Secretary of State filings with commercial registered agent mappings.
-* **County Real Property Assessors:** Ingests property parcel assessments, land use classifications, and assessed valuations.
+- **SEC EDGAR Company Intelligence:** Automatically indexes CIK corporate profiles, IRS EINs, SIC industry codes, and recent official filings (Form 4, 10-Q, 13F).
+- **State Corporate Registries:** Ingests Delaware Division of Corporations (ICIS) and Nevada Secretary of State filings with commercial registered agent mappings.
+- **County Real Property Assessors:** Ingests property parcel assessments, land use classifications, and assessed valuations.
 
 ### Run Web Harvester Commands
+
 ```bash
 # Run automated sample harvest (Berkshire Hathaway & Apple Inc)
 python3 scripts/web_scraper.py --harvest-samples
@@ -85,11 +87,12 @@ python3 scripts/web_scraper.py --state-file 2919864
 
 Dedicated harvester for public biological, genetic, and pharmacological data repositories:
 
-* **UniProt Knowledgebase (UniProtKB):** Protein sequence length, molecular weight (Da), gene nomenclature, and scientific organism taxonomy.
-* **EMBL-EBI ChEMBL API:** Bioactive chemical structures, SMILES notation, molecular formulas, and FDA clinical development phases.
-* **NCBI Entrez Gene:** Human genetic locus, chromosome location, official gene symbols, and functional descriptions.
+- **UniProt Knowledgebase (UniProtKB):** Protein sequence length, molecular weight (Da), gene nomenclature, and scientific organism taxonomy.
+- **EMBL-EBI ChEMBL API:** Bioactive chemical structures, SMILES notation, molecular formulas, and FDA clinical development phases.
+- **NCBI Entrez Gene:** Human genetic locus, chromosome location, official gene symbols, and functional descriptions.
 
 ### Run Bio Harvester Commands
+
 ```bash
 # Harvest representative biomedical samples (APP Protein, Aspirin, APP Gene)
 python3 scripts/bio_scraper.py --harvest-samples
@@ -112,12 +115,13 @@ python3 scripts/bio_scraper.py --ncbi-gene 351
 
 Monitors the local operating environment to ensure updates do not reverse user configurations or re-enable telemetry:
 
-* **Pre-Update Baseline Tracking:** Records system firmware/BIOS, OS build, locked privacy policies, and blocked bloatware into [`data/system_baseline.json`](data/system_baseline.json).
-* **Post-Update Drift Detection:** Scans host following OS, firmware, or driver updates to detect altered settings.
-* **Automated Remediation:** Silently or interactively re-enforces baseline security policies and removes unwanted services.
-* **Itemized Audit Ledger:** Emits post-run verification details to [`data/drift_audit_log.json`](data/drift_audit_log.json).
+- **Pre-Update Baseline Tracking:** Records system firmware/BIOS, OS build, locked privacy policies, and blocked bloatware into [`data/system_baseline.json`](data/system_baseline.json).
+- **Post-Update Drift Detection:** Scans host following OS, firmware, or driver updates to detect altered settings.
+- **Automated Remediation:** Silently or interactively re-enforces baseline security policies and removes unwanted services.
+- **Itemized Audit Ledger:** Emits post-run verification details to [`data/drift_audit_log.json`](data/drift_audit_log.json).
 
 ### Run Drift Remediation Commands
+
 ```bash
 # Capture fresh machine baseline
 python3 scripts/drift_remediation.py --baseline
@@ -137,9 +141,10 @@ For enterprise deployment, environment verification, and incident diagnosis, ref
 
 👉 **[Read the Installation & Troubleshooting MOP Runbook](docs/INSTALLATION_AND_TROUBLESHOOTING_MOP.md)**
 
-### Key Topics in MOP:
-* **MOP Checklist:** 5 standard operational verification steps (Lumina self-audit, Web Harvester, Bio Harvester, Baseline Scan, UI launch).
-* **Troubleshooting Matrix (TR-01 to TR-08):** Step-by-step remediations for HTTP 403 blocks, gzip byte streams, GitHub PAT permissions, macOS Apple Silicon firmware discovery, Windows PowerShell execution policies, port conflicts, and HTTP 429 rate limits.
+### Key Topics in MOP
+
+- **MOP Checklist:** 5 standard operational verification steps (Lumina self-audit, Web Harvester, Bio Harvester, Baseline Scan, UI launch).
+- **Troubleshooting Matrix (TR-01 to TR-08):** Step-by-step remediations for HTTP 403 blocks, gzip byte streams, GitHub PAT permissions, macOS Apple Silicon firmware discovery, Windows PowerShell execution policies, port conflicts, and HTTP 429 rate limits.
 
 ---
 
@@ -147,13 +152,14 @@ For enterprise deployment, environment verification, and incident diagnosis, ref
 
 A single-file, zero-dependency dashboard built with Tailwind CSS, Lucide icons, Vis.js, and Google Fonts (`Outfit`, `Inter`, `JetBrains Mono`) adhering to `/ui-pro-max` design principles:
 
-* **Dual-Domain Traversal & Nexus Engine:** Instant switching between **Corporate Ownership (Web)**, **Biomedical & Genomic Targets (Bio)**, and **Cross-Domain Sponsorship Nexus**.
-* **Biomedical Interaction Graph:** Dynamic network visualization mapping human proteins (`APP`, `TP53`), chromosomal gene loci (NCBI Gene `351`, `7157`), bioactive small molecules (`Aspirin / CHEMBL25`), and disease/pathway cascades (Alzheimer amyloid plaque formation, apoptosis checkpoint enforcement, and COX-1/COX-2 inhibition).
-* **Lumina Anti-Scanner Evasion Console:** Real-time dashboard auditing the 6 anti-bot signature evasions (`navigator.webdriver`, Client Hints, Canvas 2D 1-bit noise, WebGL ANGLE spoofing, CDC token purge, Gaussian micro-jitter) with interactive live audit simulation and one-click DOM payload export.
-* **Harvested Datasets Vault (17 Records):** Categorical filtering (`Web (10)`, `Bio (5)`, `Systems (2)`) with instant modal viewing of raw JSON payloads, verified SHA-256 cryptographic signatures, and official government/institutional authority links.
-* **Baseline & Drift Remediation:** Real-time host firmware verification (`18000.161.10`), policy locking status, interactive "Scan Drift" trigger, and audit log inspector.
+- **Dual-Domain Traversal & Nexus Engine:** Instant switching between **Corporate Ownership (Web)**, **Biomedical & Genomic Targets (Bio)**, and **Cross-Domain Sponsorship Nexus**.
+- **Biomedical Interaction Graph:** Dynamic network visualization mapping human proteins (`APP`, `TP53`), chromosomal gene loci (NCBI Gene `351`, `7157`), bioactive small molecules (`Aspirin / CHEMBL25`), and disease/pathway cascades (Alzheimer amyloid plaque formation, apoptosis checkpoint enforcement, and COX-1/COX-2 inhibition).
+- **Lumina Anti-Scanner Evasion Console:** Real-time dashboard auditing the 6 anti-bot signature evasions (`navigator.webdriver`, Client Hints, Canvas 2D 1-bit noise, WebGL ANGLE spoofing, CDC token purge, Gaussian micro-jitter) with interactive live audit simulation and one-click DOM payload export.
+- **Harvested Datasets Vault (25 Records):** Categorical filtering (`Web (10)`, `Bio (6)`, `Systems (2)`, `Founding Files (7)`) with instant modal viewing of raw JSON payloads, verified SHA-256 cryptographic signatures, and official government/institutional authority links.
+- **Baseline & Drift Remediation:** Real-time host firmware verification (`18000.161.10`), policy locking status, interactive "Scan Drift" trigger, and audit log inspector.
 
 ### Launch Local Server
+
 ```bash
 python3 -m http.server 4173
 # Open http://localhost:4173 in your browser
@@ -166,6 +172,7 @@ python3 -m http.server 4173
 A reference architecture and evidence layer built directly into `index.html` adhering to the **BI-BUILD-001 Evidence Layer Addendum** and **Whistleblower Case Management Database Build Guide**:
 
 ### Three Primary Surfaces
+
 1. **Relationship Graph (Surface 1):** Interactive force-directed Vis.js network mapping recipient banks, state agencies, local utilities, certified covenants, and observed environmental conditions. Supports forensic 300 DPI PNG rasterization and machine-readable JSON/GraphML export.
 2. **Dossier & Live Public Ledger (Surface 2):**
    - **Live Public Ledger:** Itemized rows with real action dates, payors, payees, award IDs, purpose codes, obligated/outlayed amounts, unspent cash status, and direct proof links. Excludes FEC campaign contributions and social mentions from grant math.
@@ -181,6 +188,7 @@ A reference architecture and evidence layer built directly into `index.html` adh
    - **Completeness Gate & Bates Stamper:** Enforces validation of transmittal, filer identity (air-gapped), subject keys, exhibit index, and custody cards before generating a 20-section sealed complaint packet.
 
 ### Five Founding Dossiers
+
 - **`BI-MS-WIN-001`:** Bank of Winona CDFI Financial Assistance ($3.2M) & Capacity Allocation (Montgomery County, MS).
 - **`BI-FL-PSJ-002`:** Port St. Joe Wastewater Treatment Plant Hardening & Effluent Relocation ($8.4M SRF grant).
 - **`BI-MS-RBLX-003`:** Mississippi K-12 Interactive STEM Digital Curriculum Allocation ($2.5M HB1613 fund).
@@ -188,6 +196,7 @@ A reference architecture and evidence layer built directly into `index.html` adh
 - **`BI-US-FEE-025`:** National Veterans Legal Services Program (NVLSP) PACER Fee-Award Common Fund Restitution ($125M / D.D.C. No. 16-cv-745).
 
 ### Whistleblower Case Management Architecture (The Ten Tables)
+
 - **Table 1: Sources** (Locked minimal-access record, Tier 1 air-gap, Signal/ProtonMail/SecureDrop protocol)
 - **Table 2: Cases / Matters** (Umbrella investigation record)
 - **Table 3: Evidence / Documents** (Cryptographic SHA-256 custody trail)
@@ -201,9 +210,55 @@ A reference architecture and evidence layer built directly into `index.html` adh
 
 ---
 
+## 8. The 13 Enterprise Architecture & Reliability Layers
+
+The platform implements a defense-in-depth engineering topology structured across 13 distinct layers:
+
+1. **Frontend Foundation:** Standalone Single-Page Application (SPA) built with Tailwind CSS, Vis.js physics simulation network, Lucide icons, and modern glassmorphic design (`backdrop-filter: blur(16px)`). Zero external framework overhead.
+2. **API Backend Logic:** Modular Python harvesters (`web_scraper.py`, `bio_scraper.py`, `lumina_stealth.py`, `drift_remediation.py`) integrating REST APIs across SEC EDGAR, FDIC BankFind, EMBL-EBI ChEMBL, UniProtKB, and NCBI Entrez.
+3. **Database & Storage:** 14-folder Proof Locker case archive, `data/` local store containing 25 verified public records and `.sdf` molecular files, SHA-256 integrity verification, and immutable Bates stamping sequence (`BI-MS-WIN-001-0001`+).
+4. **Auth & Permissions:** Two-tier air gap architecture isolating Tier 1 source identity (locked local encryption) from Tier 2 collaborative case content, supporting role-based access control (RBAC) and anonymous Tor/SecureDrop intake.
+5. **Hosting & Deployment:** Zero-dependency Python HTTP daemon (`python3 -m http.server 4173`), fully portable for deployment to Cloudflare Pages, Vercel, Firebase App Hosting, or GitHub Pages.
+6. **Cloud & Compute:** Bounded asynchronous worker pools, client-side rendering with local execution daemons, and low-footprint compute bounds.
+7. **CI/CD & Version Control:** Git branch management on `main`, automated pre-commit static security audits (100/100 target), mind-virus defense scans, and semantic version tracking.
+8. **Security & RLS (Row-Level Security):** Air-gapped source identity, sanitization of local filesystem paths, zero-PII guarantee, in-camera court seal compliance, and automated security scanner score 100/100.
+9. **Rate Limiting:** Ergonomic Gaussian micro-jitter (`mean=2.5s, sigma=0.8s`), exponential backoff with jitter on HTTP 429, respect for SEC EDGAR 10 req/sec and ChEMBL/UniProt limits.
+10. **Caching & CDN:** Local JSON vault deduplication by SHA-256 hash, static asset caching, immutable Bates-stamped document storage.
+11. **Load Balancing & Scaling:** Decoupled independent harvesters, asynchronous non-blocking fetch pipeline, 3 scalable build paths (Solo Reporter, Small Team, Newsroom-Grade).
+12. **Error Tracking & Logs:** Itemized post-run audit ledger (`data/drift_audit_log.json`), Lumina 6-point evasion diagnostic log, console error monitoring, and runtime health checks.
+13. **Availability & Recovery:** Pre- and post-update drift remediation, baseline restoration from `data/system_baseline.json`, multi-format export disaster recovery via `.zip`, `.json`, and `.ics`.
+
+---
+
+## 9. Biomedical Discovery: ChEMBL Database & PyMOL 3D Modeling
+
+The biomedical subsystem connects public chemical and structural biology repositories into the investigation graph:
+
+### ChEMBL Database Integration (`/chembl-database`)
+
+- **Bioactive Compound Profiling:** Ingests SMILES, molecular formulas, alogP, and clinical phase data from EMBL-EBI ChEMBL.
+- **Structure Retrieval:** Automated download of 2D/3D chemical structure files (`.sdf`) via `scripts/bio_scraper.py --download-sdf CHEMBL25`.
+- **Target Bioactivities:** Supports querying IC50, Ki, and EC50 binding affinities normalized to nM concentrations for target proteins.
+
+### PyMOL Headless 3D Visualization (`/pymol`)
+
+- **OSMesa Headless Rendering:** Generates automated PyMOL rendering scripts (`scripts/render_chembl25_pymol.py`) configured for software OSMesa rendering (`PYOPENGL_PLATFORM=osmesa`) without requiring GPU hardware or X11 displays.
+- **Publication Artifacts:** Produces high-resolution 1200x900 at 150 DPI PNG renders (`chembl25_3d.png`) and reproducible session files (`chembl25_session.pse`) for interactive inspection.
+- **Script Generation Command:**
+
+```bash
+# Download Aspirin structure from ChEMBL
+python3 scripts/bio_scraper.py --download-sdf CHEMBL25
+
+# Generate headless PyMOL visualization script
+python3 scripts/bio_scraper.py --pymol-script CHEMBL25
+```
+
+---
+
 ## Repository Structure
 
-```
+```text
 ├── README.md                                  # Comprehensive architecture documentation
 ├── SECURITY.md                                # Security & vulnerability reporting policy
 ├── Watchdog_Corruption_Atlas_Specification.md  # Complete 1,960-line technical specification
@@ -214,7 +269,7 @@ A reference architecture and evidence layer built directly into `index.html` adh
 │       ├── architecture_pipeline.jpg          # Input-to-output dataflow infographic
 │       ├── lumina_evasion_workflow.jpg        # Anti-scanner evasion mechanism
 │       └── drift_remediation_workflow.jpg     # Drift remediation lifecycle
-├── data/                                      # Verified public records & baseline manifests (24 files)
+├── data/                                      # Verified public records & baseline manifests (25 files)
 │   ├── bank_of_winona_bankfind.json           # FDIC BankFind regulatory profile (Cert #11624)
 │   ├── bank_of_winona_cdfi_awards.json        # CDFI Fund FA/TA award allocations & TLR rows
 │   ├── bank_of_winona_restricted_use.json     # Assistance agreement covenants vs MDEQ violation
@@ -235,6 +290,7 @@ A reference architecture and evidence layer built directly into `index.html` adh
 │   ├── uniprot_P05067_APP.json                # UniProtKB Amyloid-beta Precursor Protein (Human APP)
 │   ├── uniprot_P04637_TP53.json               # UniProtKB Cellular Tumor Antigen p53 (Human TP53)
 │   ├── chembl_molecule_CHEMBL25_aspirin.json  # ChEMBL Bioactive Molecule (Aspirin)
+│   ├── CHEMBL25.sdf                           # ChEMBL official 2D/3D structure file (Aspirin)
 │   ├── ncbi_gene_351_APP.json                 # NCBI Entrez Gene Summary (Human APP)
 │   ├── ncbi_gene_7157_TP53.json               # NCBI Entrez Gene Summary (Human TP53)
 │   ├── system_baseline.json                   # Host firmware & policy baseline
@@ -243,5 +299,6 @@ A reference architecture and evidence layer built directly into `index.html` adh
     ├── lumina_stealth.py                      # Lumina anti-detection engine & self-audit
     ├── web_scraper.py                         # Dedicated Web public records harvester
     ├── bio_scraper.py                         # Dedicated Bio's biomedical records harvester
+    ├── render_chembl25_pymol.py               # Headless PyMOL 3D structure rendering script
     └── drift_remediation.py                   # Pre/post-update drift remediation agent
 ```

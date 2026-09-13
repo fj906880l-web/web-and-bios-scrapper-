@@ -81,7 +81,8 @@ class BioScraper:
                     out_path = os.path.join(self.output_dir, filename)
                     with open(out_path, "w") as f:
                         json.dump(payload, f, indent=2)
-                    payload["saved_file"] = out_path
+                    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                    payload["saved_file"] = os.path.relpath(out_path, repo_root)
 
                 return {"success": True, "data": payload}
         except Exception as e:
@@ -128,7 +129,8 @@ class BioScraper:
                     out_path = os.path.join(self.output_dir, filename)
                     with open(out_path, "w") as f:
                         json.dump(payload, f, indent=2)
-                    payload["saved_file"] = out_path
+                    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                    payload["saved_file"] = os.path.relpath(out_path, repo_root)
 
                 return {"success": True, "data": payload}
         except Exception as e:
@@ -170,22 +172,127 @@ class BioScraper:
                     out_path = os.path.join(self.output_dir, filename)
                     with open(out_path, "w") as f:
                         json.dump(payload, f, indent=2)
-                    payload["saved_file"] = out_path
+                    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                    payload["saved_file"] = os.path.relpath(out_path, repo_root)
 
                 return {"success": True, "data": payload}
         except Exception as e:
             return {"success": False, "error": str(e), "gene_id": gene_id}
 
+    def download_chembl_sdf(self, chembl_id: str, output_path: Optional[str] = None) -> str:
+        """Download bioactive molecule structure file (.sdf) from ChEMBL."""
+        url = f"https://www.ebi.ac.uk/chembl/api/data/molecule/{chembl_id}.sdf"
+        headers = self.session.get_stealth_headers(referer="https://www.ebi.ac.uk/chembl/")
+        req = urllib.request.Request(url, headers=headers)
+        if not output_path:
+            output_path = os.path.join(self.output_dir, f"{chembl_id.upper()}.sdf")
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                data = resp.read()
+                with open(output_path, "wb") as f:
+                    f.write(data)
+                repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                rel_out = os.path.relpath(output_path, repo_root)
+                print(f"[+] Downloaded ChEMBL SDF structure for {chembl_id} to {rel_out}")
+                return rel_out
+        except Exception as e:
+            print(f"[!] Error downloading SDF for {chembl_id}: {e}")
+            return ""
+
+    def generate_pymol_script(self, chembl_id: str, sdf_path: Optional[str] = None, output_script: Optional[str] = None) -> str:
+        """Generate a headless PyMOL 3D visualization script adhering to the PyMOL skill."""
+        if not sdf_path:
+            sdf_path = os.path.join(self.output_dir, f"{chembl_id.upper()}.sdf")
+        if not output_script:
+            output_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"render_{chembl_id.lower()}_pymol.py")
+
+        script_content = f'''#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.10, <3.13"
+# dependencies = [
+#     "pymol-open-source-whl",
+# ]
+# ///
+"""
+PyMOL Headless 3D Molecular Structure Rendering for {chembl_id.upper()}
+=============================================================
+Uses software OSMesa rendering for headless container and CI/CD pipelines.
+Exports publication-quality PNG and reproducible PyMOL session (.pse).
+"""
+import os
+import sys
+
+# Set environment variable for headless software rendering
+os.environ["PYOPENGL_PLATFORM"] = "osmesa"
+
+import pymol
+pymol.pymol_argv = ["pymol", "-cq"]
+pymol.finish_launching()
+
+from pymol import cmd
+
+# Dynamic repository relative structure path
+repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+structure_file = os.path.join(repo_root, "data", "{chembl_id.upper()}.sdf")
+if not os.path.exists(structure_file):
+    print(f"Error: Structure file not found: {{structure_file}}")
+    cmd.quit()
+    sys.exit(1)
+
+cmd.load(structure_file, "compound_{chembl_id.lower()}")
+atom_count = cmd.count_atoms("all")
+if atom_count == 0:
+    print("Error: 0 atoms loaded from structure file")
+    cmd.quit()
+    sys.exit(1)
+
+print(f"[+] Loaded {{atom_count}} atoms for {chembl_id.upper()}")
+cmd.show("sticks", "all")
+cmd.color("cyan", "elem C")
+cmd.color("red", "elem O")
+cmd.color("blue", "elem N")
+cmd.orient()
+cmd.set("ray_opaque_background", 0)
+
+output_png = os.path.join(os.path.dirname(structure_file), "{chembl_id.lower()}_3d.png")
+output_pse = os.path.join(os.path.dirname(structure_file), "{chembl_id.lower()}_session.pse")
+
+cmd.png(output_png, width=1200, height=900, dpi=150)
+cmd.save(output_pse)
+print(f"[+] Rendered 3D structure to {{output_png}} and saved session to {{output_pse}}")
+cmd.quit()
+'''
+        with open(output_script, "w", encoding="utf-8") as f:
+            f.write(script_content)
+        repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        rel_script = os.path.relpath(output_script, repo_root)
+        print(f"[+] Generated PyMOL rendering script: {rel_script}")
+        return rel_script
+
 def main():
     parser = argparse.ArgumentParser(description="Bio's Public Records Harvester (Biomedical & Biochemical Intelligence)")
     parser.add_argument("--uniprot", metavar="ACCESSION", help="Harvest protein by UniProt Accession (e.g., P05067, P04637)")
     parser.add_argument("--chembl", metavar="CHEMBL_ID", help="Harvest bioactive compound by ChEMBL ID (e.g., CHEMBL25)")
+    parser.add_argument("--download-sdf", metavar="CHEMBL_ID", help="Download 2D/3D chemical structure (.sdf) from ChEMBL")
+    parser.add_argument("--pymol-script", metavar="CHEMBL_ID", help="Generate headless PyMOL 3D visualization script for ChEMBL molecule")
     parser.add_argument("--ncbi-gene", metavar="GENE_ID", help="Harvest gene summary by NCBI Gene ID (e.g., 351, 7157)")
     parser.add_argument("--harvest-samples", action="store_true", help="Harvest and save representative public bio samples (APP, TP53, Aspirin)")
     parser.add_argument("--output-dir", help="Custom output directory for JSON payloads")
 
     args = parser.parse_args()
     scraper = BioScraper(output_dir=args.output_dir)
+
+    if args.download_sdf:
+        path = scraper.download_chembl_sdf(args.download_sdf)
+        if path:
+            print(f"[✔] Successfully downloaded structure to {path}")
+        return
+
+    if args.pymol_script:
+        path = scraper.generate_pymol_script(args.pymol_script)
+        if path:
+            print(f"[✔] Successfully generated PyMOL script: {path}")
+        return
 
     if args.harvest_samples or (len(sys.argv) == 1):
         print("\n===================================================================")
