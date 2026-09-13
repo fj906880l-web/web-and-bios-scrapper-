@@ -1,0 +1,79 @@
+{
+  "source_authority": "U.S. Securities and Exchange Commission (SEC EDGAR REST API)",
+  "source_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+  "official_portal": "https://www.sec.gov/edgar/browse/?CIK=0000320193",
+  "cik": "0000320193",
+  "entityName": "Apple Inc.",
+  "ein": "942404110",
+  "sic": "3571",
+  "sicDescription": "Electronic Computers",
+  "stateOfIncorporation": "CA",
+  "fiscalYearEnd": "0926",
+  "tickers": [
+    "AAPL"
+  ],
+  "exchanges": [
+    "Nasdaq"
+  ],
+  "addresses": {
+    "mailing": {
+      "street1": "ONE APPLE PARK WAY",
+      "street2": null,
+      "city": "CUPERTINO",
+      "stateOrCountry": "CA",
+      "zipCode": "95014",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": null,
+      "country": null,
+      "countryCode": null
+    },
+    "business": {
+      "street1": "ONE APPLE PARK WAY",
+      "street2": null,
+      "city": "CUPERTINO",
+      "stateOrCountry": "CA",
+      "zipCode": "95014",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": null,
+      "foreignStateTerritory": null,
+      "country": null,
+      "countryCode": null
+    }
+  },
+  "recent_official_filings": [
+    {
+      "form": "4",
+      "filingDate": "2026-09-10",
+      "accessionNumber": "0001140361-26-036226",
+      "description": "FORM 4"
+    },
+    {
+      "form": "4",
+      "filingDate": "2026-09-03",
+      "accessionNumber": "0001140361-26-035636",
+      "description": "FORM 4"
+    },
+    {
+      "form": "4",
+      "filingDate": "2026-09-01",
+      "accessionNumber": "0001140361-26-035362",
+      "description": "FORM 4"
+    },
+    {
+      "form": "3",
+      "filingDate": "2026-09-01",
+      "accessionNumber": "0001140361-26-035359",
+      "description": "FORM 3"
+    },
+    {
+      "form": "8-K/A",
+      "filingDate": "2026-09-01",
+      "accessionNumber": "0001140361-26-035325",
+      "description": "8-K/A"
+    }
+  ],
+  "harvested_at": "2026-09-13T00:23:12.331863+00:00",
+  "stealth_profile": "Windows",
+  "sha256_hash": "8b05400eeb282dca554c9a42387173cd4a0141deff8d7ebde9cfa5b6cb727c61"
+}

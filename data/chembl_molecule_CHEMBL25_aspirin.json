@@ -1,0 +1,17 @@
+{
+  "source_authority": "European Bioinformatics Institute (EMBL-EBI ChEMBL)",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL25.json",
+  "chembl_id": "CHEMBL25",
+  "pref_name": "ASPIRIN",
+  "molecule_type": "Small molecule",
+  "max_phase": "4.0",
+  "natural_product": 1,
+  "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+  "molecular_formula": "180.16",
+  "alogp": "1.31",
+  "hba": 3,
+  "hbd": 1,
+  "harvested_at": "2026-09-13T00:22:59.699445+00:00",
+  "stealth_profile": "macOS",
+  "sha256_hash": "b20370e7cd5b93a331c195183a720e123ef2aa541c37abe861c02909891c22d7"
+}

@@ -1,0 +1,14 @@
+{
+  "source_authority": "UniProt Knowledgebase (UniProtKB / Swiss-Prot)",
+  "source_url": "https://rest.uniprot.org/uniprotkb/P05067.json",
+  "accession": "P05067",
+  "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+  "protein_name": "Amyloid-beta precursor protein",
+  "primary_gene": "APP",
+  "organism": "Homo sapiens",
+  "sequence_length": 770,
+  "molecular_weight_da": 86943,
+  "harvested_at": "2026-09-13T00:22:59.313161+00:00",
+  "stealth_profile": "macOS",
+  "sha256_hash": "ee20061355425015fa5daaafa8619be46133bff5df20e8197aa8617d27939125"
+}

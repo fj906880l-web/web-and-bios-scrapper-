@@ -210,7 +210,7 @@
         <div class="flex justify-between items-center mt-2 text-[11px] text-slate-500">
           <span>Verified against SEC EDGAR API, Delaware Division of Corporations, and County Tax Assessor.</span>
           <button onclick="switchRightTab('files')" class="text-cyan-400 hover:underline flex items-center gap-1 font-semibold">
-            <i data-lucide="folder" class="w-3 h-3"></i> View Pulled Real Files &amp; Baselines (6)
+            <i data-lucide="folder" class="w-3 h-3"></i> View Pulled Real Files &amp; Baselines (8)
           </button>
         </div>
       </div>
@@ -240,7 +240,7 @@
           >
             <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
             Harvested Records &amp; Baselines
-            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-1.5 py-0.5 rounded-full font-mono">6</span>
+            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-1.5 py-0.5 rounded-full font-mono">8</span>
           </button>
         </div>
 
@@ -393,6 +393,48 @@
               <span class="text-[9px] font-mono text-slate-500">STATUS: COMPLIANT</span>
               <button onclick="openFileModal('drift_audit_log')" class="text-[11px] bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30 px-2.5 py-1 rounded-lg flex items-center gap-1 transition">
                 <i data-lucide="eye" class="w-3 h-3"></i> View Audit
+              </button>
+            </div>
+          </div>
+
+          <!-- File Card 7: UniProtKB Protein Record -->
+          <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl space-y-2 hover:border-slate-700 transition">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center gap-2">
+                <i data-lucide="dna" class="w-4 h-4 text-purple-400"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-200">uniprot_P05067_APP.json</h4>
+                  <p class="text-[10px] text-slate-500 font-mono">UniProtKB Swiss-Prot • P05067 • 0.6 KB</p>
+                </div>
+              </div>
+              <span class="text-[9px] bg-purple-950 text-purple-400 border border-purple-800 px-1.5 py-0.5 rounded font-mono">BIO RECORD</span>
+            </div>
+            <p class="text-[11px] text-slate-400">Amyloid-beta precursor protein (APP), Homo sapiens. 770 amino acids, molecular weight: 86.9 kDa.</p>
+            <div class="pt-1 flex items-center justify-between">
+              <span class="text-[9px] font-mono text-slate-500 truncate max-w-[140px]">HASH: ee200613...</span>
+              <button onclick="openFileModal('uniprot_P05067_APP')" class="text-[11px] bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30 px-2.5 py-1 rounded-lg flex items-center gap-1 transition">
+                <i data-lucide="eye" class="w-3 h-3"></i> View Bio Payload
+              </button>
+            </div>
+          </div>
+
+          <!-- File Card 8: ChEMBL Bioactive Compound -->
+          <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl space-y-2 hover:border-slate-700 transition">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center gap-2">
+                <i data-lucide="flask-conical" class="w-4 h-4 text-emerald-400"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-200">chembl_molecule_CHEMBL25_aspirin.json</h4>
+                  <p class="text-[10px] text-slate-500 font-mono">EMBL-EBI ChEMBL API • CHEMBL25 • 0.6 KB</p>
+                </div>
+              </div>
+              <span class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-1.5 py-0.5 rounded font-mono">BIO PHARMA</span>
+            </div>
+            <p class="text-[11px] text-slate-400">Aspirin (CHEMBL25) bioactive compound structure. SMILES: CC(=O)Oc1ccccc1C(=O)O, Max Phase 4.0 FDA Approved.</p>
+            <div class="pt-1 flex items-center justify-between">
+              <span class="text-[9px] font-mono text-slate-500 truncate max-w-[140px]">HASH: b20370e7...</span>
+              <button onclick="openFileModal('chembl_molecule_CHEMBL25_aspirin')" class="text-[11px] bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30 px-2.5 py-1 rounded-lg flex items-center gap-1 transition">
+                <i data-lucide="eye" class="w-3 h-3"></i> View Bio Payload
               </button>
             </div>
           </div>
@@ -674,6 +716,49 @@
             "bloatware_reinstalled_removed": 0,
             "registry_plist_keys_restored": 0
           }
+        }
+      },
+      "uniprot_P05067_APP": {
+        filename: "uniprot_P05067_APP.json",
+        source: "UniProt Knowledgebase (UniProtKB / Swiss-Prot)",
+        officialUrl: "https://rest.uniprot.org/uniprotkb/P05067.json",
+        portalUrl: "https://www.uniprot.org/uniprotkb/P05067/entry",
+        hash: "SHA-256: ee20061355425015fa5daaafa8619be46133bff5df20e8197aa8617d27939125",
+        data: {
+          "source_authority": "UniProt Knowledgebase (UniProtKB / Swiss-Prot)",
+          "source_url": "https://rest.uniprot.org/uniprotkb/P05067.json",
+          "accession": "P05067",
+          "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+          "protein_name": "Amyloid-beta precursor protein",
+          "primary_gene": "APP",
+          "organism": "Homo sapiens",
+          "sequence_length": 770,
+          "molecular_weight_da": 86943,
+          "harvested_at": "2026-09-13T00:22:59.313161+00:00",
+          "stealth_profile": "macOS"
+        }
+      },
+      "chembl_molecule_CHEMBL25_aspirin": {
+        filename: "chembl_molecule_CHEMBL25_aspirin.json",
+        source: "European Bioinformatics Institute (EMBL-EBI ChEMBL API)",
+        officialUrl: "https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL25.json",
+        portalUrl: "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL25/",
+        hash: "SHA-256: b20370e7cd5b93a331c195183a720e123ef2aa541c37abe861c02909891c22d7",
+        data: {
+          "source_authority": "European Bioinformatics Institute (EMBL-EBI ChEMBL)",
+          "source_url": "https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL25.json",
+          "chembl_id": "CHEMBL25",
+          "pref_name": "ASPIRIN",
+          "molecule_type": "Small molecule",
+          "max_phase": "4.0",
+          "natural_product": 1,
+          "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "molecular_formula": "180.16",
+          "alogp": "1.31",
+          "hba": 3,
+          "hbd": 1,
+          "harvested_at": "2026-09-13T00:22:59.699445+00:00",
+          "stealth_profile": "macOS"
         }
       }
     };

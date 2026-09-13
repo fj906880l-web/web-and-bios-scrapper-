@@ -1,0 +1,81 @@
+{
+  "source_authority": "U.S. Securities and Exchange Commission (SEC EDGAR REST API)",
+  "source_url": "https://data.sec.gov/submissions/CIK0001067983.json",
+  "official_portal": "https://www.sec.gov/edgar/browse/?CIK=0001067983",
+  "cik": "0001067983",
+  "entityName": "BERKSHIRE HATHAWAY INC",
+  "ein": "470813844",
+  "sic": "6331",
+  "sicDescription": "Fire, Marine & Casualty Insurance",
+  "stateOfIncorporation": "DE",
+  "fiscalYearEnd": "1231",
+  "tickers": [
+    "BRK-B",
+    "BRK-A"
+  ],
+  "exchanges": [
+    "NYSE",
+    "NYSE"
+  ],
+  "addresses": {
+    "mailing": {
+      "street1": "3555 FARNAM STREET",
+      "street2": null,
+      "city": "OMAHA",
+      "stateOrCountry": "NE",
+      "zipCode": "68131",
+      "stateOrCountryDescription": "NE",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": null,
+      "country": null,
+      "countryCode": null
+    },
+    "business": {
+      "street1": "3555 FARNAM STREET",
+      "street2": null,
+      "city": "OMAHA",
+      "stateOrCountry": "NE",
+      "zipCode": "68131",
+      "stateOrCountryDescription": "NE",
+      "isForeignLocation": null,
+      "foreignStateTerritory": null,
+      "country": null,
+      "countryCode": null
+    }
+  },
+  "recent_official_filings": [
+    {
+      "form": "4",
+      "filingDate": "2026-09-04",
+      "accessionNumber": "0001728451-26-000003",
+      "description": "PRIMARY DOCUMENT"
+    },
+    {
+      "form": "SCHEDULE 13G/A",
+      "filingDate": "2026-08-14",
+      "accessionNumber": "0001193125-26-352910",
+      "description": ""
+    },
+    {
+      "form": "SCHEDULE 13G",
+      "filingDate": "2026-08-14",
+      "accessionNumber": "0001193125-26-352904",
+      "description": ""
+    },
+    {
+      "form": "13F-HR",
+      "filingDate": "2026-08-14",
+      "accessionNumber": "0001193125-26-352200",
+      "description": ""
+    },
+    {
+      "form": "4",
+      "filingDate": "2026-08-13",
+      "accessionNumber": "0001193125-26-349574",
+      "description": "4"
+    }
+  ],
+  "harvested_at": "2026-09-13T00:23:12.265066+00:00",
+  "stealth_profile": "Windows",
+  "sha256_hash": "cecd20c8ae22ea697fe49446470aa60e2854e7211c5ba27d18a3cf7a69baae2a"
+}
