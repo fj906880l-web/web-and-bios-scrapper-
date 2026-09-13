@@ -11,7 +11,9 @@ An automated public-records intelligence platform and anti-bot scanner evasion e
 
 ## Architecture & Dataflow: From Input to Output
 
-![End-to-End Architecture Dataflow Pipeline](docs/images/architecture_pipeline.jpg)
+<p align="center">
+  <img src="docs/images/architecture_pipeline.jpg" alt="End-to-End Architecture Dataflow Pipeline" width="880">
+</p>
 
 ### 3-Stage Input-to-Output Lifecycle
 
@@ -34,7 +36,9 @@ An automated public-records intelligence platform and anti-bot scanner evasion e
 
 ## 1. Lumina Anti-Scanner Evasion Engine (`scripts/lumina_stealth.py`)
 
-![Lumina Anti-Scanner Evasion Mechanism](docs/images/lumina_evasion_workflow.jpg)
+<p align="center">
+  <img src="docs/images/lumina_evasion_workflow.jpg" alt="Lumina Anti-Scanner Evasion Mechanism" width="880">
+</p>
 
 Prevents automated scanners (Cloudflare Turnstile, DataDome, Akamai, PerimeterX, AWS WAF, and standard headless browser detectors) from flagging or blocking harvesting agents:
 
@@ -111,7 +115,9 @@ python3 scripts/bio_scraper.py --ncbi-gene 351
 
 ## 4. System Baseline & Post-Update Drift Remediation (`scripts/drift_remediation.py`)
 
-![System Baseline & Drift Remediation Lifecycle](docs/images/drift_remediation_workflow.jpg)
+<p align="center">
+  <img src="docs/images/drift_remediation_workflow.jpg" alt="System Baseline & Drift Remediation Lifecycle" width="880">
+</p>
 
 Monitors the local operating environment to ensure updates do not reverse user configurations or re-enable telemetry:
 
@@ -150,6 +156,10 @@ For enterprise deployment, environment verification, and incident diagnosis, ref
 
 ## 6. Interactive Web & Bio Visualizer (`index.html`)
 
+<p align="center">
+  <img src="docs/images/watchdog_evidence_dashboard.png" alt="Watchdog Evidence Dashboard & Multi-Domain Visualizer" width="880">
+</p>
+
 A single-file, zero-dependency dashboard built with Tailwind CSS, Lucide icons, Vis.js, and Google Fonts (`Outfit`, `Inter`, `JetBrains Mono`) adhering to `/ui-pro-max` design principles:
 
 - **Dual-Domain Traversal & Nexus Engine:** Instant switching between **Corporate Ownership (Web)**, **Biomedical & Genomic Targets (Bio)**, and **Cross-Domain Sponsorship Nexus**.
@@ -168,6 +178,10 @@ python3 -m http.server 4173
 ---
 
 ## 7. BI-BUILD-001 Evidence Layer & Whistleblower Case Management System
+
+<p align="center">
+  <img src="docs/images/evidence_layer_graph.png" alt="Relationship Graph Surface 1 & Proof Inspector" width="880">
+</p>
 
 A reference architecture and evidence layer built directly into `index.html` adhering to the **BI-BUILD-001 Evidence Layer Addendum** and **Whistleblower Case Management Database Build Guide**:
 
@@ -212,6 +226,10 @@ A reference architecture and evidence layer built directly into `index.html` adh
 
 ## 8. The 13 Enterprise Architecture & Reliability Layers
 
+<p align="center">
+  <img src="docs/images/thirteen_system_layers_diagram.svg" alt="13 Enterprise Architecture & Reliability Layers Topology" width="880">
+</p>
+
 The platform implements a defense-in-depth engineering topology structured across 13 distinct layers:
 
 1. **Frontend Foundation:** Standalone Single-Page Application (SPA) built with Tailwind CSS, Vis.js physics simulation network, Lucide icons, and modern glassmorphic design (`backdrop-filter: blur(16px)`). Zero external framework overhead.
@@ -232,7 +250,15 @@ The platform implements a defense-in-depth engineering topology structured acros
 
 ## 9. Biomedical Discovery: ChEMBL Database & PyMOL 3D Modeling
 
+<p align="center">
+  <img src="docs/images/chembl25_aspirin_structure.svg" alt="ChEMBL25 Aspirin Chemical Structure & Molecular Mechanism" width="880">
+</p>
+
 The biomedical subsystem connects public chemical and structural biology repositories into the investigation graph:
+
+<p align="center">
+  <img src="docs/images/bio_harvester_interface.png" alt="Biomedical Public Records Harvester Interface" width="880">
+</p>
 
 ### ChEMBL Database Integration (`/chembl-database`)
 
@@ -267,8 +293,14 @@ python3 scripts/bio_scraper.py --pymol-script CHEMBL25
 │   ├── INSTALLATION_AND_TROUBLESHOOTING_MOP.md # Method of Procedure (MOP) Runbook
 │   └── images/
 │       ├── architecture_pipeline.jpg          # Input-to-output dataflow infographic
+│       ├── bio_harvester_interface.png        # Biomedical public records harvester UI
+│       ├── chembl25_aspirin_structure.svg     # ChEMBL25 Aspirin chemical structure & targets
+│       ├── chembl_aspirin_discovery.png       # ChEMBL Aspirin target assay discovery
+│       ├── drift_remediation_workflow.jpg     # Drift remediation lifecycle
+│       ├── evidence_layer_graph.png           # Relationship graph & custody inspector
 │       ├── lumina_evasion_workflow.jpg        # Anti-scanner evasion mechanism
-│       └── drift_remediation_workflow.jpg     # Drift remediation lifecycle
+│       ├── thirteen_system_layers_diagram.svg # 13 Enterprise layers architecture topology
+│       └── watchdog_evidence_dashboard.png    # Interactive evidence dashboard overview
 ├── data/                                      # Verified public records & baseline manifests (25 files)
 │   ├── bank_of_winona_bankfind.json           # FDIC BankFind regulatory profile (Cert #11624)
 │   ├── bank_of_winona_cdfi_awards.json        # CDFI Fund FA/TA award allocations & TLR rows

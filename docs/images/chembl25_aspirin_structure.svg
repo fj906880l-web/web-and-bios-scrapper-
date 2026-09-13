@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" width="100%" height="100%" style="background:#020617; border-radius:16px; border:1px solid #1e293b;">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title Header -->
+  <text x="30" y="45" fill="#38bdf8" font-family="'Outfit', 'Inter', sans-serif" font-size="20" font-weight="700" letter-spacing="1">ChEMBL25 — ASPIRIN (Acetylsalicylic Acid)</text>
+  <text x="30" y="70" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12">SMILES: CC(=O)Oc1ccccc1C(=O)O • Formula: C9H8O4 • MW: 180.16 g/mol • Status: FDA Approved (Phase 4)</text>
+
+  <!-- Benzene Ring Bonds (x, y centered around 250, 240) -->
+  <!-- Ring Vertices:
+       C1: 250, 170 (Carboxylic acid attachment)
+       C2: 320, 210 (Ester attachment)
+       C3: 320, 290
+       C4: 250, 330
+       C5: 180, 290
+       C6: 180, 210
+  -->
+  <g stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Ring -->
+    <line x1="250" y1="170" x2="320" y2="210" />
+    <line x1="320" y1="210" x2="320" y2="290" />
+    <line x1="320" y1="290" x2="250" y2="330" />
+    <line x1="250" y1="330" x2="180" y2="290" />
+    <line x1="180" y1="290" x2="180" y2="210" />
+    <line x1="180" y1="210" x2="250" y2="170" />
+
+    <!-- Aromatic Alternating Double Bonds -->
+    <line x1="247" y1="184" x2="307" y2="218" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="308" y1="283" x2="250" y2="316" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="192" y1="218" x2="192" y2="282" stroke="#0284c7" stroke-width="2.5" />
+
+    <!-- Carboxylic Acid Branch from C1 (250, 170) -->
+    <!-- C1 -> C(=O)OH: C_carbonyl at (250, 105) -->
+    <line x1="250" y1="170" x2="250" y2="110" />
+    <!-- C_carbonyl -> =O at (195, 75) double bond -->
+    <line x1="247" y1="108" x2="198" y2="78" stroke="#ef4444" stroke-width="3" />
+    <line x1="253" y1="98" x2="204" y2="68" stroke="#ef4444" stroke-width="3" />
+    <!-- C_carbonyl -> -OH at (295, 80) -->
+    <line x1="250" y1="105" x2="295" y2="80" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Ester Branch from C2 (320, 210) -->
+    <!-- C2 -> O_ester at (380, 180) -->
+    <line x1="320" y1="210" x2="380" y2="180" stroke="#f43f5e" stroke-width="3.5" />
+    <!-- O_ester -> C_acetyl at (440, 215) -->
+    <line x1="400" y1="180" x2="440" y2="215" stroke="#38bdf8" stroke-width="3.5" />
+    <!-- C_acetyl -> =O at (440, 280) double bond -->
+    <line x1="435" y1="215" x2="435" y2="275" stroke="#ef4444" stroke-width="3" />
+    <line x1="445" y1="215" x2="445" y2="275" stroke="#ef4444" stroke-width="3" />
+    <!-- C_acetyl -> CH3 at (505, 180) -->
+    <line x1="440" y1="215" x2="505" y2="180" stroke="#38bdf8" stroke-width="3.5" />
+  </g>
+
+  <!-- Atom Labels -->
+  <!-- Carboxylic Acid =O -->
+  <text x="175" y="75" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">O</text>
+  <!-- Carboxylic Acid -OH -->
+  <text x="300" y="82" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">OH</text>
+
+  <!-- Ester Oxygen -->
+  <text x="382" y="182" fill="#fb7185" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">O</text>
+
+  <!-- Acetyl Carbonyl =O -->
+  <text x="432" y="302" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">O</text>
+
+  <!-- Methyl -CH3 -->
+  <text x="515" y="185" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">CH<tspan baseline-shift="sub" font-size="11">3</tspan></text>
+
+  <!-- Carbon Vertex Indicator Dots -->
+  <circle cx="250" cy="170" r="4" fill="#0284c7" />
+  <circle cx="320" cy="210" r="4" fill="#0284c7" />
+  <circle cx="320" cy="290" r="4" fill="#0284c7" />
+  <circle cx="250" cy="330" r="4" fill="#0284c7" />
+  <circle cx="180" cy="290" r="4" fill="#0284c7" />
+  <circle cx="180" cy="210" r="4" fill="#0284c7" />
+
+  <!-- Annotation Cards on the Right -->
+  <g transform="translate(480, 240)">
+    <rect x="0" y="0" width="190" height="175" rx="10" fill="#0b1329" stroke="#1e293b" stroke-width="1.5" />
+    <text x="12" y="24" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="13" font-weight="700">TARGET MECHANISM</text>
+    
+    <text x="12" y="48" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="11" font-weight="600">PTGS1 (COX-1):</text>
+    <text x="12" y="64" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Acetylation of Ser-529</text>
+    <text x="12" y="78" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="9">✔ Blocks Platelet TXA2</text>
+
+    <line x1="12" y1="90" x2="178" y2="90" stroke="#1e293b" stroke-width="1" />
+
+    <text x="12" y="108" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="11" font-weight="600">PTGS2 (COX-2):</text>
+    <text x="12" y="124" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Acetylation of Ser-516</text>
+    <text x="12" y="138" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="9">✔ Suppresses PGE2 Synth</text>
+
+    <rect x="12" y="148" width="166" height="18" rx="4" fill="#1e1b4b" stroke="#4338ca" stroke-width="0.8" />
+    <text x="20" y="161" fill="#a5b4fc" font-family="'JetBrains Mono', monospace" font-size="9">PDB: 1PTH • 6Y3C • SDF</text>
+  </g>
+
+  <!-- Footer Metadata -->
+  <text x="30" y="420" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Source: EMBL-EBI ChEMBL REST API • Generated for Web &amp; Bio Public Records Harvester Subsystem</text>
+</svg>
