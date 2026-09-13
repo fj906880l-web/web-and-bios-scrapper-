@@ -8,37 +8,32 @@ An automated public-records intelligence platform and anti-bot scanner evasion e
 
 ---
 
-## Architecture Overview
+## Architecture & Dataflow: From Input to Output
 
-```
-                        ┌────────────────────────────────────────┐
-                        │        Interactive Visualizer          │
-                        │        (Tauri / Web index.html)        │
-                        └───────────────────┬────────────────────┘
-                                            │
-               ┌────────────────────────────┴────────────────────────────┐
-               ▼                                                         ▼
-┌───────────────────────────────┐                         ┌───────────────────────────────┐
-│     Lumina Stealth Engine     │                         │   System Drift Remediation    │
-│  (scripts/lumina_stealth.py)  │                         │ (scripts/drift_remediation.py)│
-├───────────────────────────────┤                         ├───────────────────────────────┤
-│ • DOM Prototype Hardening     │                         │ • Firmware / BIOS Tracking    │
-│ • Canvas & WebGL Noise        │                         │ • OS Update Drift Detection   │
-│ • Client-Hints Harmonization  │                         │ • Automated Policy Rollback   │
-│ • Ergonomic Gaussian Jitter   │                         │ • SHA-256 Baseline Integrity  │
-└──────────────┬────────────────┘                         └───────────────┬───────────────┘
-               │                                                          │
-       ┌───────┴────────┐                                                 ▼
-       ▼                ▼                                      ┌────────────────────┐
-┌──────────────┐ ┌──────────────┐                              │  Baseline & Audit  │
-│  Web Scraper │ │ Bio Scraper  │                              │  Manifests (data/) │
-│  (SEC/States)│ │(NCBI/UniProt)│                              └────────────────────┘
-└──────────────┘ └──────────────┘
-```
+![End-to-End Architecture Dataflow Pipeline](docs/images/architecture_pipeline.jpg)
+
+### 3-Stage Input-to-Output Lifecycle
+
+1. **Stage 1: Input Ingestion**
+   - **Public Corporate Registries:** SEC EDGAR REST API submissions (CIK, Form 4, 10-Q, 13F), Delaware Division of Corporations (ICIS entity files), Nevada Secretary of State (SilverFlume trust & business entities).
+   - **Public Property Tax Assessors:** Douglas County & Shelby County GIS / parcel tax databases ($48.25M HQ parcels).
+   - **Public Biomedical Data Sources:** UniProtKB protein accession IDs, NCBI nucleotide/gene registries, ChEMBL bioactive molecular queries.
+   - **Host Hardware & Firmware Telemetry:** Apple Silicon `SPHardwareDataType` / Windows WMI `Win32_BIOS` firmware versions (`18000.161.10`), OS builds (`25G83`), and preference domain plists / registry hives.
+
+2. **Stage 2: Processing, Evasion & Integrity**
+   - **Lumina Stealth Engine:** Strips automation artifacts (`navigator.webdriver`), injects 1-bit boundary noise into 2D canvas exports, spoofs WebGL GPU vendors (`ANGLE (Apple, Apple M2)`), harmonizes Client-Hints (`Sec-CH-UA`), and inserts Gaussian micro-jitter delays (`mean=2.5s`).
+   - **System Baseline Drift Engine:** Captures pre-update states into SHA-256 cryptographic manifests, detects post-update setting reversals or bloatware restorations, and executes autonomous policy rollbacks.
+
+3. **Stage 3: Output & Discovery**
+   - **Interactive Entity Network Graph:** Force-directed visualization mapping relationships across corporate parent entities, subsidiaries, corporate officers, registered agents, and titled real estate parcels.
+   - **Itemized Post-Run Audit Ledgers:** Structured JSON logs documenting scan timestamps, drift counts, and confirmed restored configurations.
+   - **Verified Evidence Dossiers:** Downloadable and inspectable public filing payloads sealed with SHA-256 cryptographic checksums.
 
 ---
 
 ## 1. Lumina Anti-Scanner Evasion Engine (`scripts/lumina_stealth.py`)
+
+![Lumina Anti-Scanner Evasion Mechanism](docs/images/lumina_evasion_workflow.jpg)
 
 Prevents automated scanners (Cloudflare Turnstile, DataDome, Akamai, PerimeterX, AWS WAF, and standard headless browser detectors) from flagging or blocking harvesting agents:
 
@@ -73,6 +68,8 @@ python3 scripts/lumina_stealth.py --test-bio P05067
 ---
 
 ## 2. System Baseline & Post-Update Drift Remediation (`scripts/drift_remediation.py`)
+
+![System Baseline & Drift Remediation Lifecycle](docs/images/drift_remediation_workflow.jpg)
 
 Monitors the local operating environment to ensure updates do not reverse user configurations or re-enable telemetry:
 
