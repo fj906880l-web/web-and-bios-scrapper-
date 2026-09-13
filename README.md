@@ -145,11 +145,13 @@ For enterprise deployment, environment verification, and incident diagnosis, ref
 
 ## 6. Interactive Web & Bio Visualizer (`index.html`)
 
-A single-file, zero-dependency dashboard built with Tailwind CSS, Lucide icons, and Vis.js:
+A single-file, zero-dependency dashboard built with Tailwind CSS, Lucide icons, Vis.js, and Google Fonts (`Outfit`, `Inter`, `JetBrains Mono`) adhering to `/ui-pro-max` design principles:
 
-* **Entity Network Visualizer:** Dynamic force-directed graph rendering corporations, individuals, registered agents, and physical real estate assets.
-* **Baseline & Drift Remediation Card:** Real-time host firmware verification (`18000.161.10`), policy locking status, interactive "Scan Drift" trigger, and audit log inspector.
-* **Harvested Records Drawer:** Direct proof inspection for verified government and baseline files with SHA-256 cryptographic hashes.
+* **Dual-Domain Traversal & Nexus Engine:** Instant switching between **Corporate Ownership (Web)**, **Biomedical & Genomic Targets (Bio)**, and **Cross-Domain Sponsorship Nexus**.
+* **Biomedical Interaction Graph:** Dynamic network visualization mapping human proteins (`APP`, `TP53`), chromosomal gene loci (NCBI Gene `351`, `7157`), bioactive small molecules (`Aspirin / CHEMBL25`), and disease/pathway cascades (Alzheimer amyloid plaque formation, apoptosis checkpoint enforcement, and COX-1/COX-2 inhibition).
+* **Lumina Anti-Scanner Evasion Console:** Real-time dashboard auditing the 6 anti-bot signature evasions (`navigator.webdriver`, Client Hints, Canvas 2D 1-bit noise, WebGL ANGLE spoofing, CDC token purge, Gaussian micro-jitter) with interactive live audit simulation and one-click DOM payload export.
+* **Harvested Datasets Vault (17 Records):** Categorical filtering (`Web (10)`, `Bio (5)`, `Systems (2)`) with instant modal viewing of raw JSON payloads, verified SHA-256 cryptographic signatures, and official government/institutional authority links.
+* **Baseline & Drift Remediation:** Real-time host firmware verification (`18000.161.10`), policy locking status, interactive "Scan Drift" trigger, and audit log inspector.
 
 ### Launch Local Server
 ```bash
@@ -172,18 +174,22 @@ python3 -m http.server 4173
 │       ├── architecture_pipeline.jpg          # Input-to-output dataflow infographic
 │       ├── lumina_evasion_workflow.jpg        # Anti-scanner evasion mechanism
 │       └── drift_remediation_workflow.jpg     # Drift remediation lifecycle
-├── data/                                      # Verified public records & baseline manifests
+├── data/                                      # Verified public records & baseline manifests (17 files)
 │   ├── sec_edgar_CIK0001067983_berkshire.json # Official SEC EDGAR submission (Berkshire)
+│   ├── sec_edgar_CIK0001067983_berkshire_hatha.json # Live harvested Berkshire Hathaway profile
 │   ├── sec_edgar_CIK0000320193_apple.json     # Official SEC EDGAR submission (Apple)
+│   ├── sec_edgar_CIK0000320193_apple_inc.json # Live harvested Apple Inc profile
 │   ├── sec_edgar_CIK0001099_apex.json         # Official SEC EDGAR submission (Apex)
-│   ├── de_sos_filing_2919864_berkshire.json   # Delaware Corporate Registry
-│   ├── de_sos_filing_7749102_apex.json        # Delaware Corporate Registry
-│   ├── nv_sos_solaria_trust.json              # Nevada Secretary of State
+│   ├── de_sos_filing_2919864_berkshire.json   # Delaware Corporate Registry (Berkshire)
+│   ├── de_sos_filing_7749102_apex.json        # Delaware Corporate Registry (Apex)
+│   ├── nv_sos_solaria_trust.json              # Nevada Secretary of State (Solaria Trust)
 │   ├── douglas_assessor_parcel_berkshire_hq.json # Douglas County Assessor ($48.25M HQ)
-│   ├── shelby_assessor_parcel_4011.json       # Shelby County Assessor
-│   ├── uniprot_P05067_APP.json                # UniProtKB Amyloid-beta Precursor Protein
+│   ├── shelby_assessor_parcel_4011.json       # Shelby County Assessor (Memphis Marina)
+│   ├── uniprot_P05067_APP.json                # UniProtKB Amyloid-beta Precursor Protein (Human APP)
+│   ├── uniprot_P04637_TP53.json               # UniProtKB Cellular Tumor Antigen p53 (Human TP53)
 │   ├── chembl_molecule_CHEMBL25_aspirin.json  # ChEMBL Bioactive Molecule (Aspirin)
 │   ├── ncbi_gene_351_APP.json                 # NCBI Entrez Gene Summary (Human APP)
+│   ├── ncbi_gene_7157_TP53.json               # NCBI Entrez Gene Summary (Human TP53)
 │   ├── system_baseline.json                   # Host firmware & policy baseline
 │   └── drift_audit_log.json                   # Itemized drift audit ledger
 └── scripts/                                   # Automation daemons & harvesters

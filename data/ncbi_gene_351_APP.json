@@ -8,7 +8,7 @@
   "tax_id": 9606,
   "chromosome": "21",
   "map_location": "21q21.3",
-  "harvested_at": "2026-09-13T00:30:35.859274+00:00",
-  "stealth_profile": "Windows",
-  "sha256_hash": "c8fd922fea1995cd5a9e503dc3a11cd1b412bbb1d61bf6b80e8c5abff479c1f6"
+  "harvested_at": "2026-09-13T07:13:41.687113+00:00",
+  "stealth_profile": "macOS_Safari",
+  "sha256_hash": "c3e9fdbb359b11d7cdd5c0e724376d044750cc3a0af4ebaf5635b94dfd200798"
 }
