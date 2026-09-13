@@ -1,0 +1,22 @@
+{
+  "county": "SHELBY",
+  "state": "TN",
+  "parcel_id": "4011-B",
+  "alternate_pin": "073042-00019",
+  "property_address": "88 Harbor Town Blvd",
+  "property_city": "Memphis",
+  "property_zip": "38103",
+  "legal_description": "LOT 14 HARBOR VIEW COMMERCIAL SUBDIVISION PHASE 2",
+  "land_use_code": "420 - COMMERCIAL WATERFRONT OFFICE / MARINA",
+  "owner_name_raw": "APEX HOLDINGS LLC",
+  "tax_year": 2026,
+  "total_assessed_value": "$3,850,000.00",
+  "land_value": "$1,100,000.00",
+  "improvement_value": "$2,750,000.00",
+  "last_sale_date": "2024-04-12",
+  "last_sale_price": "$4,200,000.00",
+  "deed_book_page": "WD-2024-09821",
+  "assessor_url": "https://www.assessormemphis.com/parcel/4011-B",
+  "raw_payload_hash": "c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5",
+  "straw_buyer_flag": "Corporate owner matches out-of-state Delaware shell; tax billing address routed to New York nominee"
+}

@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "created_at": "2026-09-13T00:07:18.234026+00:00Z",
+  "firmware_baseline": {
+    "os_type": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "captured_at": "2026-09-13T00:07:18.014150+00:00Z",
+    "os_product_name": "macOS",
+    "os_version": "26.6.2",
+    "os_build": "25G83",
+    "model_identifier": "Mac14,3",
+    "firmware_version": "18000.161.10",
+    "os_loader_version": "18000.161.10"
+  },
+  "security_states_baseline": {
+    "AutoSubmitDiagnostic": false,
+    "SendDataToApple": false,
+    "SafariUniversalSearch": false,
+    "SiriAssistantEnabled": true,
+    "TelemetryServicesDisabled": true
+  },
+  "manifest_hash": "9faa3b7bf8523ed781201b41a4315cc5212f4725a6598bf6a77b0d4af83deb1c"
+}

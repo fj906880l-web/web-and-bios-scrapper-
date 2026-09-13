@@ -1,0 +1,31 @@
+{
+  "state_jurisdiction": "US-NV",
+  "file_number": "NV-TR-88219",
+  "business_name": "SOLARIA REAL ESTATE TRUST",
+  "entity_type": "BUSINESS TRUST / NOMINEE HOLDING",
+  "formation_date": "2023-11-04T14:30:00Z",
+  "status": "ACTIVE",
+  "registered_agent": {
+    "agent_id": "NV-AGENT-102",
+    "name": "NEVADA CORPORATE HEADQUARTERS INC",
+    "address": "311 S Division St, Carson City, NV 89703",
+    "commercial_agent_factory": true
+  },
+  "raw_payload_hash": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2",
+  "source_url": "https://esos.nv.gov/EntitySearch/OnlineEntitySearch?fileNumber=NV-TR-88219",
+  "trustees_and_nominees": [
+    {
+      "name": "Rostova, Elena",
+      "role": "Nominee Trustee",
+      "reported_address": "9405 Wilshire Blvd, Beverly Hills, CA 90212"
+    }
+  ],
+  "linked_assets": [
+    {
+      "parcel_id": "CLARK-PARCEL-109",
+      "county": "CLARK",
+      "state": "NV",
+      "assessed_value": "$6,100,000.00"
+    }
+  ]
+}

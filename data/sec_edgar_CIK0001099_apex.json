@@ -1,0 +1,54 @@
+{
+  "cik": "0001099412",
+  "entityName": "APEX HOLDINGS LLC",
+  "sic": "6799",
+  "sicDescription": "INVESTORS, NEC",
+  "ein": "12-3456789",
+  "description": "SEC EDGAR Form 4 & 10-K Ingestion Pull",
+  "filingDate": "2026-08-14T16:22:00Z",
+  "periodOfReport": "2026-06-30",
+  "accessionNumber": "0001099412-26-000412",
+  "raw_payload_hash": "8f9b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+  "source": "https://data.sec.gov/submissions/CIK0001099412.json",
+  "addresses": {
+    "mailing": {
+      "street1": "1209 NORTH ORANGE ST",
+      "street2": "SUITE 400",
+      "city": "WILMINGTON",
+      "stateOrCountry": "DE",
+      "zipCode": "19801"
+    },
+    "business": {
+      "street1": "1209 NORTH ORANGE ST",
+      "street2": "SUITE 400",
+      "city": "WILMINGTON",
+      "stateOrCountry": "DE",
+      "zipCode": "19801"
+    }
+  },
+  "formerNames": [
+    {
+      "name": "APEX LOGISTICS & ASSET MGMT INC",
+      "from": "2021-01-10",
+      "to": "2024-03-15"
+    }
+  ],
+  "beneficialOwners": [
+    {
+      "name": "Vance, Jonathan",
+      "role": "Managing Member / 10% Beneficial Owner",
+      "sharesHeld": 450000,
+      "votingPower": "68.4%",
+      "address": "450 Lexington Ave, New York, NY 10017"
+    }
+  ],
+  "associatedTransactions": [
+    {
+      "date": "2026-05-18",
+      "transactionType": "Asset Transfer",
+      "counterparty": "Solaria Real Estate Trust",
+      "amount": "$4,250,000.00",
+      "filingReference": "Form 8-K Item 2.01"
+    }
+  ]
+}
