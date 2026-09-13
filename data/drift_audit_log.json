@@ -1,6 +1,81 @@
 {
-  "timestamp": "2026-09-13T00:07:18.766920+00:00Z",
-  "status": "COMPLIANT",
-  "drift_count": 0,
-  "remediated_items": []
+  "timestamp": "2026-09-13T09:09:33.342073+00:00Z",
+  "status": "REMEDIATED",
+  "os_type": "Darwin",
+  "firmware_version": "19000.100.5",
+  "equipment_update_detected": true,
+  "drift_count": 5,
+  "settings_turned_off": [
+    "SystemIntegrityProtection",
+    "ApplicationFirewallEnabled"
+  ],
+  "settings_reset_to_default": [
+    "SiriAssistantEnabled"
+  ],
+  "remediated_items": [
+    "Logged System BIOS/UEFI Firmware update: verified and recorded",
+    "Logged OS Kernel / Build update: verified and recorded",
+    "Re-enabled macOS Application Firewall (socketfilterfw)",
+    "Restored com.apple.assistant.support:Assistant Enabled = false"
+  ],
+  "firmware_instructions": [
+    "[RECOVERY REQUIRED] System Integrity Protection is disabled. Boot into macOS Recovery (Cmd+R) and run 'csrutil enable'."
+  ],
+  "raw_events": [
+    {
+      "type": "FIRMWARE_UPDATE",
+      "severity": "WARNING",
+      "category": "HARDWARE_EQUIPMENT",
+      "component": "System BIOS/UEFI Firmware",
+      "baseline_value": "18000.161.10",
+      "current_value": "19000.100.5",
+      "detail": "Host firmware updated from 18000.161.10 to 19000.100.5. Verification of hardware security registers required.",
+      "remediation_action": "RE_EVALUATE_HARDWARE_SECURITY"
+    },
+    {
+      "type": "OS_BUILD_UPDATE",
+      "severity": "INFO",
+      "category": "OS_KERNEL",
+      "component": "OS Kernel / Build",
+      "baseline_value": "25G83",
+      "current_value": "26A99",
+      "detail": "Operating system kernel build updated from 25G83 to 26A99.",
+      "remediation_action": "VERIFY_POST_UPDATE_INTEGRITY"
+    },
+    {
+      "type": "SETTING_TURNED_OFF",
+      "severity": "CRITICAL",
+      "category": "BIOS_SECURITY",
+      "component": "SystemIntegrityProtection",
+      "baseline_value": true,
+      "current_value": false,
+      "detail": "CRITICAL: Hardware security control 'SystemIntegrityProtection' was turned OFF after update (Expected: ENABLED, Found: DISABLED).",
+      "is_firmware_setting": false,
+      "remediation_action": "RESTORE_FIRMWARE_SECURITY_SystemIntegrityProtection",
+      "instructions": "Re-enable via host administrative security policy."
+    },
+    {
+      "type": "SETTING_TURNED_OFF",
+      "severity": "CRITICAL",
+      "category": "BIOS_SECURITY",
+      "component": "ApplicationFirewallEnabled",
+      "baseline_value": true,
+      "current_value": false,
+      "detail": "CRITICAL: Hardware security control 'ApplicationFirewallEnabled' was turned OFF after update (Expected: ENABLED, Found: DISABLED).",
+      "is_firmware_setting": false,
+      "remediation_action": "RESTORE_FIRMWARE_SECURITY_ApplicationFirewallEnabled",
+      "instructions": "Re-enable via host administrative security policy."
+    },
+    {
+      "type": "SETTING_RESET_TO_DEFAULT",
+      "severity": "HIGH",
+      "category": "PRIVACY_TELEMETRY",
+      "component": "SiriAssistantEnabled",
+      "baseline_value": false,
+      "current_value": true,
+      "detail": "Privacy toggle 'SiriAssistantEnabled' was reset to default active state after update (Expected: False, Found: True).",
+      "remediation_action": "REAPPLY_BASELINE_SiriAssistantEnabled",
+      "instructions": "Re-apply system privacy lock via registry/defaults plist."
+    }
+  ]
 }
