@@ -1,0 +1,65 @@
+{
+  "source_authority": "U.S. Department of the Treasury \u2014 Community Development Financial Institutions Fund",
+  "source_url": "https://www.cdfifund.gov/awards/state-awards/MS",
+  "official_portal": "https://www.cdfifund.gov/",
+  "recipient_name": "The Bank of Winona",
+  "recipient_uei": "M9L2V5J6Q1N8",
+  "fdic_cert": 11624,
+  "awards": [
+    {
+      "award_id": "201FA023412",
+      "fain": "FA201023412",
+      "program": "Financial Assistance (FA)",
+      "cfda_number": "21.020",
+      "award_year": 2020,
+      "obligated_amount": 1250000.0,
+      "outlayed_amount": 1250000.0,
+      "unspent_cash_reported": "GAP (Requires SF-425 Production)",
+      "action_date": "2020-09-24",
+      "period_of_performance": "2020-09-24 to 2023-09-30",
+      "purpose_category": "Housing & Small Business Lending in Persistent Poverty Counties",
+      "restricted_use_clause": "Recipient covenants that all Financial Assistance funds shall be deployed strictly for Eligible Financial Products directed to Certified Target Markets in designated persistent poverty tracts within the State of Mississippi. (Agreement \u00a7 3.2, p. 14)",
+      "certifying_official": {
+        "name": "Jodie L. Harris",
+        "title": "Director, CDFI Fund",
+        "agency": "U.S. Department of the Treasury",
+        "form_signed": "CDFI Assistance Agreement Form 80-102",
+        "date_signed": "2020-09-24"
+      },
+      "recipient_signer": {
+        "name": "Robert M. Holmes, Jr.",
+        "title": "President & Chief Executive Officer",
+        "entity": "The Bank of Winona",
+        "date_signed": "2020-09-28"
+      }
+    },
+    {
+      "award_id": "221TA054819",
+      "fain": "TA221054819",
+      "program": "Technical Assistance (TA)",
+      "cfda_number": "21.020",
+      "award_year": 2022,
+      "obligated_amount": 125000.0,
+      "outlayed_amount": 125000.0,
+      "unspent_cash_reported": 0.0,
+      "action_date": "2022-09-18",
+      "period_of_performance": "2022-09-18 to 2024-09-30",
+      "purpose_category": "Capacity Building & Underwriting IT Modernization",
+      "restricted_use_clause": "Grant proceeds restricted to staff training, underwriting system acquisition, and credit scoring technology enhancement. Operating disbursements prohibited. (Agreement \u00a7 4.1, p. 8)",
+      "certifying_official": {
+        "name": "Jodie L. Harris",
+        "title": "Director, CDFI Fund",
+        "agency": "U.S. Department of the Treasury",
+        "form_signed": "TA Grant Agreement Form 80-105",
+        "date_signed": "2022-09-18"
+      },
+      "recipient_signer": {
+        "name": "Robert M. Holmes, Jr.",
+        "title": "President & CEO",
+        "entity": "The Bank of Winona",
+        "date_signed": "2022-09-22"
+      }
+    }
+  ],
+  "retrieved_at": "2026-09-13T07:22:00Z"
+}

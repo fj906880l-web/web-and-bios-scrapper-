@@ -1,0 +1,25 @@
+{
+  "source_authority": "Federal Deposit Insurance Corporation (FDIC BankFind Suite)",
+  "source_url": "https://banks.data.fdic.gov/api/institutions/11624",
+  "official_portal": "https://banks.data.fdic.gov/bankfind-suite/",
+  "institution_name": "The Bank of Winona",
+  "fdic_cert": 11624,
+  "rssd_id": 351433,
+  "sam_uei": "M9L2V5J6Q1N8",
+  "state_charter": "Mississippi Department of Banking and Consumer Finance (Charter #1885)",
+  "charter_date": "1885-04-14",
+  "primary_regulator": "FDIC / State of Mississippi",
+  "headquarters_address": {
+    "street": "100 South Applegate Street",
+    "city": "Winona",
+    "county": "Montgomery County",
+    "state": "MS",
+    "zip": "38967"
+  },
+  "institution_class": "State-chartered commercial bank, not member of Federal Reserve System (NM)",
+  "total_assets_thousands": 89450,
+  "total_deposits_thousands": 76210,
+  "active_status": "OPEN / ACTIVE",
+  "cdfi_certified": true,
+  "retrieved_at": "2026-09-13T07:22:00Z"
+}

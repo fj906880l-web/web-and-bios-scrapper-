@@ -1,0 +1,14 @@
+{
+  "source_authority": "Watchdog Atlas Forensic Analysis Unit / MDEQ / Census Bureau",
+  "case_id": "BI-MS-WIN-001",
+  "certified_restricted_text": "Recipient covenants that 100% of Financial Assistance funds shall be deployed into eligible lending products serving persistent poverty tracts in Montgomery, Carroll, and Grenada Counties. (CDFI Agreement \u00a7 3.2, p. 14)",
+  "observed_community_condition": "Montgomery County Municipal Water & Sewer Authority operates under MDEQ Administrative Order 2025-W-019 citing chronic untreated overflows; 41% of Bank of Winona commercial loan originations in 2021-2023 were secured by assets outside certified persistent poverty census tracts.",
+  "clock_status": "UNMET / OVERDUE COMPLIANCE REVIEW",
+  "as_of_date": "2026-09-13",
+  "citations": [
+    "CDFI Assistance Agreement 201FA023412, \u00a7 3.2",
+    "Mississippi DEQ Enforcement Action Order 2025-W-019",
+    "FFIEC HMDA Montgomery County Lending Disclosure 2023",
+    "Federal Reserve Call Report Schedule RC-C (Loans & Lease Financing)"
+  ]
+}

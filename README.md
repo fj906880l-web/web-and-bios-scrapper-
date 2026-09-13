@@ -161,20 +161,67 @@ python3 -m http.server 4173
 
 ---
 
+## 7. BI-BUILD-001 Evidence Layer & Whistleblower Case Management System
+
+A reference architecture and evidence layer built directly into `index.html` adhering to the **BI-BUILD-001 Evidence Layer Addendum** and **Whistleblower Case Management Database Build Guide**:
+
+### Three Primary Surfaces
+1. **Relationship Graph (Surface 1):** Interactive force-directed Vis.js network mapping recipient banks, state agencies, local utilities, certified covenants, and observed environmental conditions. Supports forensic 300 DPI PNG rasterization and machine-readable JSON/GraphML export.
+2. **Dossier & Live Public Ledger (Surface 2):**
+   - **Live Public Ledger:** Itemized rows with real action dates, payors, payees, award IDs, purpose codes, obligated/outlayed amounts, unspent cash status, and direct proof links. Excludes FEC campaign contributions and social mentions from grant math.
+   - **Custody Card:** Plain-language legal custody determination answering who holds unspent dollars as of today and which public record proves it (e.g. SF-425 requirement).
+   - **Officials of Record:** Named individuals (signatories, bank executives, judicial certifiers) with public contact channels, eliminating generic role stickers.
+   - **Restricted-Use vs. Observed Condition:** Side-by-side comparative split pane linking statutory covenants to documented violations (e.g., MDEQ Administrative Orders).
+   - **Second-Hop Money & OSINT Statements:** Subaward/vendor tracking with locked parent award IDs, alongside contemporaneous public representations.
+3. **Proof Locker & Federal Complaint Packets (Surface 3):**
+   - **14-Folder Provenance Archive:** Structured tree (`00_cover` through `13_exports`) with in-app document viewer, deduplication by SHA-256 hash, and edge quote pinning.
+   - **Gap Register ("What We Cannot Yet Prove"):** Explicit accounting of unpublished public records, holding offices, and ready-to-fire request kits.
+   - **FOIA & Public Records Workspace:** Prefilled statutory request letters for Treasury OIG, CDFI Fund, MS Public Records Act (§ 25-61-1), and FL Chapter 119.
+   - **Statutory Clock Engine:** Automated deadline tracking for 20-day FOIA, state PRA windows, IG intake acknowledgement, and False Claims Act 60-day in-camera seals, exportable to RFC 5545 iCalendar (`.ics`).
+   - **Completeness Gate & Bates Stamper:** Enforces validation of transmittal, filer identity (air-gapped), subject keys, exhibit index, and custody cards before generating a 20-section sealed complaint packet.
+
+### Five Founding Dossiers
+- **`BI-MS-WIN-001`:** Bank of Winona CDFI Financial Assistance ($3.2M) & Capacity Allocation (Montgomery County, MS).
+- **`BI-FL-PSJ-002`:** Port St. Joe Wastewater Treatment Plant Hardening & Effluent Relocation ($8.4M SRF grant).
+- **`BI-MS-RBLX-003`:** Mississippi K-12 Interactive STEM Digital Curriculum Allocation ($2.5M HB1613 fund).
+- **`BI-MS-META-189`:** Meta Platforms Enterprise Data Center Energy Offsetting & AG Contingent Fund Reserve ($14.2M).
+- **`BI-US-FEE-025`:** National Veterans Legal Services Program (NVLSP) PACER Fee-Award Common Fund Restitution ($125M / D.D.C. No. 16-cv-745).
+
+### Whistleblower Case Management Architecture (The Ten Tables)
+- **Table 1: Sources** (Locked minimal-access record, Tier 1 air-gap, Signal/ProtonMail/SecureDrop protocol)
+- **Table 2: Cases / Matters** (Umbrella investigation record)
+- **Table 3: Evidence / Documents** (Cryptographic SHA-256 custody trail)
+- **Table 4: Complaints & Filings** (OSC, OSHA, SEC Form TCR, CFTC, IRS Form 211, DOJ Qui Tam FCA)
+- **Table 5: FOIA & Public Records Requests** (Statutory response tracking)
+- **Table 6: Deadlines & SOL Tracker** (FCA civil 6-yr/3-yr capped at 10 yrs, 3-yr retaliation)
+- **Table 7: Communications Log** (Substantive contact records)
+- **Table 8: Contacts / Officials** (Agency liaisons & Inspectors General)
+- **Table 9: Legal Proceedings** (Court dockets & seal management)
+- **Table 10: Publication Tracker** (Editorial output, legal review, and embargo status)
+
+---
+
 ## Repository Structure
 
 ```
 ├── README.md                                  # Comprehensive architecture documentation
 ├── SECURITY.md                                # Security & vulnerability reporting policy
 ├── Watchdog_Corruption_Atlas_Specification.md  # Complete 1,960-line technical specification
-├── index.html                                 # Standalone interactive visualization dashboard
+├── index.html                                 # Standalone interactive visualization & evidence dashboard
 ├── docs/                                      # Operational manuals & visual diagrams
 │   ├── INSTALLATION_AND_TROUBLESHOOTING_MOP.md # Method of Procedure (MOP) Runbook
 │   └── images/
 │       ├── architecture_pipeline.jpg          # Input-to-output dataflow infographic
 │       ├── lumina_evasion_workflow.jpg        # Anti-scanner evasion mechanism
 │       └── drift_remediation_workflow.jpg     # Drift remediation lifecycle
-├── data/                                      # Verified public records & baseline manifests (17 files)
+├── data/                                      # Verified public records & baseline manifests (24 files)
+│   ├── bank_of_winona_bankfind.json           # FDIC BankFind regulatory profile (Cert #11624)
+│   ├── bank_of_winona_cdfi_awards.json        # CDFI Fund FA/TA award allocations & TLR rows
+│   ├── bank_of_winona_restricted_use.json     # Assistance agreement covenants vs MDEQ violation
+│   ├── founding_port_st_joe_wastewater.json   # FDEP SRF wastewater grant profile & custody card
+│   ├── founding_roblox_mississippi_fund.json  # MS K-12 STEM curriculum allocation profile
+│   ├── founding_meta_mississippi_allocation.json # Meta data center & AG contingent fund reserve
+│   ├── founding_nvlsp_pacer_fee_award.json    # D.D.C. PACER fee award & common fund restitution
 │   ├── sec_edgar_CIK0001067983_berkshire.json # Official SEC EDGAR submission (Berkshire)
 │   ├── sec_edgar_CIK0001067983_berkshire_hatha.json # Live harvested Berkshire Hathaway profile
 │   ├── sec_edgar_CIK0000320193_apple.json     # Official SEC EDGAR submission (Apple)
