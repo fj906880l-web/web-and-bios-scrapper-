@@ -1,26 +1,15 @@
 {
   "source_authority": "Douglas County Assessor / Register of Deeds",
-  "source_url": "https://www.dcassessor.org/property-search",
-  "official_portal": "https://www.dcassessor.org",
-  "payload_sha256": "f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3",
+  "source_url": "https://www.dcassessor.org",
   "county": "DOUGLAS",
   "state": "NE",
   "parcel_id": "0114090000",
-  "property_address": "3555 FARNAM ST",
-  "property_city": "OMAHA",
-  "property_state": "NE",
-  "property_zip": "68131",
-  "owner_name_raw": "BERKSHIRE HATHAWAY INC (CORP HQ / SUITE 1440)",
-  "legal_description": "LOT 1 BLOCK 4 SUBDIVISION WEST END ADDITION",
-  "property_class": "COMMERCIAL HIGH-RISE EXECUTIVE OFFICE",
+  "property_address": "3555 FARNAM ST, OMAHA, NE 68131",
+  "owner_name_raw": "BERKSHIRE HATHAWAY INC (SUITE 1440)",
+  "total_assessed_value": "$48,250,000.00",
+  "land_use": "COMMERCIAL HIGH-RISE EXECUTIVE OFFICE",
   "tax_year": 2026,
-  "assessed_value_total": "$48,250,000.00",
-  "assessed_land_value": "$6,500,000.00",
-  "assessed_building_value": "$41,750,000.00",
-  "last_deed_recording": "DOC-2018-09142",
-  "tax_district": "OMAHA PUBLIC SCHOOLS / DOUGLAS GENERAL",
-  "verification_metadata": {
-    "cadastral_map_verified": true,
-    "verified_timestamp": "2026-09-12T20:02:30Z"
-  }
+  "harvested_at": "2026-09-13T00:26:17.121547+00:00",
+  "stealth_profile": "macOS",
+  "sha256_hash": "41d86ac0ff58445a45cd9c8122d91e52aa395e01141143f2321cd9d1e4176cab"
 }

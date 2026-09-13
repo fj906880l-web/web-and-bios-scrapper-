@@ -390,17 +390,17 @@ def main():
         print("[*] Running Lumina Anti-Scanner Evasion Audit...")
         audit_result = LuminaScannerAuditor.audit_signatures()
         print(json.dumps(audit_result, indent=2))
-        print("\\n[✔] ALL 6 SCANNER SIGNATURE CHECKS PASSED — ZERO AUTOMATION LEAKS DETECTED.")
+        print("\n[✔] ALL 6 SCANNER SIGNATURE CHECKS PASSED — ZERO AUTOMATION LEAKS DETECTED.")
         print("-" * 65)
 
     if args.test_web:
-        print(f"\\n[*] Harvesting SEC EDGAR public corporate record for CIK: {args.test_web}...")
+        print(f"\n[*] Harvesting SEC EDGAR public corporate record for CIK: {args.test_web}...")
         web_harvester = WebPublicHarvester(session)
         result = web_harvester.harvest_sec_edgar(args.test_web)
         print("SEC Harvest Result:", json.dumps(result, indent=2))
 
     if args.test_bio:
-        print(f"\\n[*] Harvesting UniProt public biomedical record for Accession: {args.test_bio}...")
+        print(f"\n[*] Harvesting UniProt public biomedical record for Accession: {args.test_bio}...")
         bio_harvester = BioPublicHarvester(session)
         result = bio_harvester.harvest_uniprot_protein(args.test_bio)
         print("Bio Harvest Result:", json.dumps(result, indent=2))

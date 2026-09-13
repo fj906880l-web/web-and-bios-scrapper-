@@ -8,7 +8,7 @@
   "organism": "Homo sapiens",
   "sequence_length": 770,
   "molecular_weight_da": 86943,
-  "harvested_at": "2026-09-13T00:22:59.313161+00:00",
-  "stealth_profile": "macOS",
-  "sha256_hash": "ee20061355425015fa5daaafa8619be46133bff5df20e8197aa8617d27939125"
+  "harvested_at": "2026-09-13T00:26:20.394492+00:00",
+  "stealth_profile": "macOS_Safari",
+  "sha256_hash": "09c0acafda748cfefec7a3054e0ed2277cac8aa261ebfb64785e8ade0c373715"
 }

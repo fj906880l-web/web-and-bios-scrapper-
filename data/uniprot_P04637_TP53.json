@@ -1,0 +1,14 @@
+{
+  "source_authority": "UniProt Knowledgebase (UniProtKB / Swiss-Prot)",
+  "source_url": "https://rest.uniprot.org/uniprotkb/P04637.json",
+  "accession": "P04637",
+  "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+  "protein_name": "Cellular tumor antigen p53",
+  "primary_gene": "TP53",
+  "organism": "Homo sapiens",
+  "sequence_length": 393,
+  "molecular_weight_da": 43653,
+  "harvested_at": "2026-09-13T00:26:23.428071+00:00",
+  "stealth_profile": "macOS",
+  "sha256_hash": "10efd35f7ad6557e4ca86237c87169509f9527a9073fd8b13d0d0e3ab3cf1b2c"
+}

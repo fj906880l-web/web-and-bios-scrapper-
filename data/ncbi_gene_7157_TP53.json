@@ -1,0 +1,14 @@
+{
+  "source_authority": "National Center for Biotechnology Information (NCBI Entrez)",
+  "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gene&id=7157&retmode=json",
+  "gene_id": "7157",
+  "symbol": "TP53",
+  "description": "tumor protein p53",
+  "organism": "Homo sapiens",
+  "tax_id": 9606,
+  "chromosome": "17",
+  "map_location": "17p13.1",
+  "harvested_at": "2026-09-13T00:26:24.734635+00:00",
+  "stealth_profile": "macOS_Safari",
+  "sha256_hash": "03eddb742ee851e3ee8561dc8fb103a3982225a438793e778ee266a507f99c87"
+}

@@ -1,40 +1,19 @@
 {
   "source_authority": "Delaware Department of State - Division of Corporations",
   "source_url": "https://icis.corp.delaware.gov/ecorp/entitysearch/NameSearch.aspx?fn=2919864",
-  "official_portal": "https://corp.delaware.gov",
-  "payload_sha256": "4a7b9c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
   "state_jurisdiction": "US-DE",
   "file_number": "2919864",
   "entity_name": "BERKSHIRE HATHAWAY INC.",
   "entity_type": "GENERAL CORPORATION",
-  "incorporation_date": "1998-06-16T00:00:00Z",
+  "incorporation_date": "1998-06-16",
   "status": "GOOD STANDING / ACTIVE",
-  "residency": "DOMESTIC",
   "registered_agent": {
     "agent_name": "THE CORPORATION TRUST COMPANY",
     "agent_code": "0022359",
-    "address": "CORPORATION TRUST CENTER 1209 ORANGE ST",
-    "city": "WILMINGTON",
-    "county": "NEW CASTLE",
-    "state": "DE",
-    "postal_code": "19801",
-    "phone": "302-658-7581",
-    "commercial_registered_agent": true
+    "address": "CORPORATION TRUST CENTER 1209 ORANGE ST, WILMINGTON, DE 19801",
+    "commercial_agent": true
   },
-  "authorized_shares": [
-    {
-      "class": "CLASS A COMMON",
-      "shares": "1,650,000",
-      "par_value": "$5.00"
-    },
-    {
-      "class": "CLASS B COMMON",
-      "shares": "3,225,000,000",
-      "par_value": "$0.0033"
-    }
-  ],
-  "verification_metadata": {
-    "registry_verification_method": "Delaware ICIS Entity Search",
-    "verified_timestamp": "2026-09-12T20:02:15Z"
-  }
+  "harvested_at": "2026-09-13T00:26:15.814041+00:00",
+  "stealth_profile": "macOS_Safari",
+  "sha256_hash": "b69bd0bfab7e76ba616090a2e7da67bba7a9718cee7e5759a8b5f8bb1d667bb7"
 }
