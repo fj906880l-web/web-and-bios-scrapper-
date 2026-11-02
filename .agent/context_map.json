@@ -1,0 +1,122 @@
+{
+  "schema_version": "2.0.0",
+  "protocol": "IBM-Context-Aware-Coding-x-Gemini-Antigravity",
+  "generated_at": "2026-11-02T19:16:39Z",
+  "repo_map": {
+    "project_name": "web-and-bios-scrapper-",
+    "project_root": "/Users/malcolm/web-and-bios-scrapper-",
+    "task_filter": "general",
+    "total_code_files": 9,
+    "mapped_code_files": 9,
+    "excluded_noise_items": 12,
+    "entry_points": [],
+    "config_files": [
+      "GEMINI.md",
+      "WORKFLOWS_AND_SKILLS.md"
+    ],
+    "test_files": [
+      "tests/__init__.py",
+      "tests/test_drift_remediation.py"
+    ],
+    "modules": [
+      {
+        "path": "scripts/__init__.py",
+        "symbols": [],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/bio_scraper.py",
+        "symbols": [
+          "class BioScraper [harvest_uniprot, harvest_chembl, harvest_ncbi_gene, download_chembl_sdf, generate_pymol_script]",
+          "def main()"
+        ],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/drift_remediation.py",
+        "symbols": [
+          "class SystemDriftAgent [capture_firmware_and_os_info, capture_privacy_and_security_states, create_baseline, detect_drift, remediate_drift, simulate_post_update_drift]",
+          "def main()"
+        ],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/lumina_stealth.py",
+        "symbols": [
+          "def decode_payload()",
+          "class LuminaStealthSession [get_stealth_headers, ergonomic_delay, fetch]",
+          "class LuminaScannerAuditor [audit_signatures]",
+          "class WebPublicHarvester [harvest_sec_edgar]",
+          "class BioPublicHarvester [harvest_uniprot_protein]",
+          "def print_banner()",
+          "def main()"
+        ],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/render_chembl25_pymol.py",
+        "symbols": [],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/shift_left_security_guard.py",
+        "symbols": [
+          "def audit_principle_1_fail_safe()",
+          "def audit_principle_2_secrets_and_git()",
+          "def audit_principle_3_supply_chain()",
+          "def audit_principle_4_intent_and_guardrails()",
+          "def audit_principle_5_agentic_guardrails()",
+          "def run_full_security_audit()"
+        ],
+        "relevance_score": 1
+      },
+      {
+        "path": "scripts/web_scraper.py",
+        "symbols": [
+          "class WebScraper [harvest_sec_edgar, harvest_delaware_sos, harvest_county_assessor]",
+          "def main()"
+        ],
+        "relevance_score": 1
+      },
+      {
+        "path": "tests/__init__.py",
+        "symbols": [],
+        "relevance_score": 1
+      },
+      {
+        "path": "tests/test_drift_remediation.py",
+        "symbols": [
+          "class TestSystemDriftAgent [setUp, test_capture_firmware_and_os_info_structure, test_capture_privacy_and_security_states, test_baseline_creation_and_hash_integrity, test_clean_scan_zero_drift, test_equipment_update_and_setting_turned_off_darwin]"
+        ],
+        "relevance_score": 1
+      }
+    ]
+  },
+  "lockfile_dependencies": {
+    "project_name": "web-and-bios-scrapper-",
+    "sources_detected": [],
+    "dependency_count": 0,
+    "resolved_dependencies": {}
+  },
+  "test_feedback_loop": {
+    "project_name": "web-and-bios-scrapper-",
+    "primary_verification_command": "python3 -m unittest discover tests",
+    "scoped_test_command": "python3 -m unittest discover tests",
+    "matched_test_files": [
+      "tests/__init__.py",
+      "tests/test_drift_remediation.py"
+    ],
+    "harness_verify_present": false
+  },
+  "gemini_conventions": {
+    "project_name": "web-and-bios-scrapper-",
+    "gemini_md_present": true,
+    "domain_rules": [
+      "* **Polite Crawling Protocol:** Enforce exponential backoff with jitter and circuit breakers per domain.",
+      "* **Zero Paid APIs:** Rely strictly on free, open public data sources and standard Python HTTP parsers.",
+      "* **DLP Content Scrubbing:** Sanitize scraped records to strip PII and sensitive credentials."
+    ],
+    "learned_conventions": [],
+    "zero_claude_residue_verified": true
+  }
+}
