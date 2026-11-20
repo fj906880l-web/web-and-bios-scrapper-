@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convergence Weekly · Issue #001 · Violet Widget Template Reference</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23a855f7'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #0b0914;
+      --card: rgba(22, 18, 38, 0.85);
+      --border: rgba(168, 85, 247, 0.25);
+      --violet: #a855f7;
+      --indigo: #6366f1;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header, main, footer { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+    nav[role="tablist"] { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+    button.tab-btn { background: var(--card); color: var(--text); border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 999px; cursor: pointer; }
+    button.tab-btn[aria-selected="true"] { background: var(--violet); color: #0b0914; font-weight: 600; }
+    section.widget-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; backdrop-filter: blur(12px); }
+    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; margin-right: 0.4rem; }
+    .badge-reported { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+    .badge-claim { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+    .badge-analysis { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { text-align: left; padding: 0.6rem; border-bottom: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header id="heroSection">
+    <p class="eyebrow">ISSUE #001 · CONVERGENCE WEEKLY · FACTS VERIFIED 2026-10-28 ET</p>
+    <h1>Convergence Weekly: The Violet Widget Interactive Edition</h1>
+    <p>Where AI, robotics, electronics, utilities, and healthcare technology collide. Published by Market Haven Consulting.</p>
+    <nav role="tablist" aria-label="Convergence Sections">
+      <button class="tab-btn" role="tab" aria-selected="true" data-target="matrixSection">Convergence Matrix</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="labSection">3D Model Lab</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="telemetrySection">Production Scoreboard</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="briefSection">Briefing Room</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="gallerySection">Sector Snapshots</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="pollSection">Signal vs. Noise</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="specSection">System Spec</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-target="sourcesSection">Sources</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="matrixSection" class="widget-card" aria-labelledby="h-matrix">
+      <h2 id="h-matrix">1. Convergence Matrix</h2>
+      <p id="matrixHub"><span class="badge badge-reported">[Reported]</span> Interactive hub connecting AI compute clusters, grid interconnects, and surgical robotics.</p>
+      <ul id="whyItMatters">
+        <li><span class="badge badge-reported">[Reported]</span> Sub-station transformer lead times remain 36–48 months across US interconnects.</li>
+        <li><span class="badge badge-analysis">[Analysis]</span> Co-packaged optics reduce rack-to-rack inference power draw by 22–28%.</li>
+      </ul>
+    </section>
+
+    <section id="labSection" class="widget-card" aria-labelledby="h-lab">
+      <h2 id="h-lab">2. 3D Model Lab</h2>
+      <p><span class="badge badge-analysis">[AI-Generated Illustration]</span> Interactive 3D component inspection (illustrative schematic, not a product photograph).</p>
+    </section>
+
+    <section id="telemetrySection" class="widget-card" aria-labelledby="h-telemetry">
+      <h2 id="h-telemetry">3. Production Scoreboard</h2>
+      <p><span class="badge badge-reported">[Telemetry Chart]</span> Verified production metrics; vendor guidance explicitly marked as <span class="badge badge-claim">[Claim]</span>.</p>
+    </section>
+
+    <section id="briefSection" class="widget-card" aria-labelledby="h-brief">
+      <h2 id="h-brief">4. Briefing Room</h2>
+      <p>Synchronized audio-caption narration of this week’s verified convergence brief.</p>
+    </section>
+
+    <section id="gallerySection" class="widget-card" aria-labelledby="h-gallery">
+      <h2 id="h-gallery">5. Sector Snapshots</h2>
+      <div class="snapshot-card" data-label="AI & Compute"><span class="stat">1.2 GW</span> — <span class="badge badge-reported">[Reported]</span> Campus interconnect queue filings. (Illustration is not a product photo.)</div>
+    </section>
+
+    <section id="pollSection" class="widget-card" aria-labelledby="h-poll">
+      <h2 id="h-poll">6. Signal vs. Noise Poll</h2>
+      <p>Which bottleneck resolves first for 2027 frontier clusters? (Vote counts start at 0.)</p>
+      <button type="button" class="tab-btn" onclick="vote(0)">HBM4 Packaging Yield (0)</button>
+      <button type="button" class="tab-btn" onclick="vote(1)">Behind-the-Meter Power (0)</button>
+      <button type="button" class="tab-btn" onclick="vote(2)">VLA Robotics Sim-to-Real (0)</button>
+    </section>
+
+    <section id="specSection" class="widget-card" aria-labelledby="h-spec">
+      <h2 id="h-spec">7. System Spec</h2>
+      <table>
+        <thead><tr><th>Parameter</th><th>Specification</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Architecture</td><td>2nm Backside Power Delivery</td><td><span class="badge badge-reported">[Reported]</span></td></tr>
+          <tr><td>Target Deployment</td><td>Q4 2026 Volume Ramp (Plan)</td><td><span class="badge badge-claim">[Claim]</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sourcesSection" class="widget-card" aria-labelledby="h-sources">
+      <h2 id="h-sources">8. Verified Sources & Provenance</h2>
+      <ul>
+        <li><a href="https://www.ferc.gov" style="color: var(--violet);">FERC Interconnection Queue Filing</a> — Primary regulatory record verified 2026-10-28.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Market Haven Consulting · Convergence Weekly · Sent via Kit (`https://app.kit.com/mcp`) · <a href="#unsubscribe" style="color: var(--muted);">Unsubscribe</a></p>
+  </footer>
+
+  <script>
+    const MODELS = { default: { label: "Illustrative Rack Interconnect", parts: ["Optical Transceiver", "Cold Plate Manifold", "Busbar"] } };
+    const nodeData = { health: "Biomedical AI", robotics: "Embodied Kinematics", electronics: "Co-Packaged Optics", utilities: "Grid Interconnect" };
+    const votes = [0, 0, 0];
+    function vote(idx) {
+      votes[idx] += 1;
+      const btns = document.querySelectorAll("#pollSection button");
+      const labels = ["HBM4 Packaging Yield", "Behind-the-Meter Power", "VLA Robotics Sim-to-Real"];
+      btns.forEach((b, i) => { b.textContent = `${labels[i]} (${votes[i]})`; });
+    }
+    document.querySelectorAll('nav[role="tablist"] .tab-btn').forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll('nav[role="tablist"] .tab-btn').forEach(b => b.setAttribute("aria-selected", "false"));
+        btn.setAttribute("aria-selected", "true");
+        const target = document.getElementById(btn.dataset.target);
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>

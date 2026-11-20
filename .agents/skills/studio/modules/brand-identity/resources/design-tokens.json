@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "brand_name": "Regime Trader",
+    "description": "Core design tokens for UI implementation."
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#3B82F6",
+      "hover": "#60A5FA",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#13111C",
+      "foreground": "#F8FAFC"
+    },
+    "background": "#0B0F19",
+    "foreground": "#F8FAFC",
+    "muted": "#1E293B",
+    "accent": "#F59E0B",
+    "accent-alt": "#8B5CF6",
+    "destructive": "#EF4444",
+    "success": "#10B981"
+  },
+  "typography": {
+    "font_family_headings": ["Inter", "sans-serif"],
+    "font_family_body": ["Roboto", "sans-serif"],
+    "font_weight_bold": "700",
+    "font_weight_normal": "400"
+  },
+  "ui": {
+    "border_radius_default": "0.5rem",
+    "border_radius_small": "0.25rem",
+    "spacing_base_unit": "4px"
+  }
+}

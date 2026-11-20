@@ -1,0 +1,28 @@
+{
+  "version": "2026.1",
+  "workflows": [
+    {
+      "name": "full_stack_feature",
+      "steps": [
+        {"agent": "supervisor-v1", "action": "route_task"},
+        {"agent": "guardrail-v1", "action": "pre_execution_check"},
+        {"agent": "backend-v1", "action": "implement_service_logic"},
+        {"agent": "frontend-v1", "action": "build_ui_component"},
+        {"agent": "browser-v1", "action": "verify_render"},
+        {"agent": "devops-v1", "action": "run_ci_verification"},
+        {"agent": "guardrail-v1", "action": "post_execution_check"},
+        {"agent": "supervisor-v1", "action": "validate_artifact"}
+      ]
+    },
+    {
+      "name": "trading_strategy_patch",
+      "steps": [
+        {"agent": "supervisor-v1", "action": "route_task"},
+        {"agent": "guardrail-v1", "action": "audit_50pct_capital_cap"},
+        {"agent": "backend-v1", "action": "apply_strategy_edits"},
+        {"agent": "devops-v1", "action": "execute_pytest"},
+        {"agent": "supervisor-v1", "action": "validate_artifact"}
+      ]
+    }
+  ]
+}

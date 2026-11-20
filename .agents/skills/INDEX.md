@@ -1,65 +1,49 @@
-# Indexed Project & System Skills Catalog
-**Registry:** Antigravity Skills Master Index
+# Indexed Category Master Skills Catalog
+**Registry:** Antigravity Master Skills v2.0 (`9` Single-Pass Categories)
 
 <skills>
-- **agent-harness-v2**: Master runtime specification and operational skill for Agent Harness v2.0. Governs 4-Asset Memory Hub, ISTL continuous confidence scoring, Supervisor CEO layer, Security Gating (<80 block), and Mind Virus Inoculation.
-  - Path: `/Users/malcolm/.gemini/config/skills/agent-harness-v2/SKILL.md`
+- **`/ship`** (`ship`): Use when hardening code, auditing security/UI quality, running adversarial verification, or sealing release artifacts end-to-end. Synthesizes TruffleHog v3+, Cloudflare 6-phase audit, IBM 5 Shift-Left principles, Vanta scaling guardrails, container blast-radius isolation, SAST (>=80), Fable Judge, Try-Harder PoC validation, and tactile anti-slop UI checks in one pass.
+  - Path: `.agents/skills/ship/SKILL.md`
+  - Runner: `python3 .agents/skills/ship/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (8): verified-release-and-ui-craft, shift-left-ai-security, daily-security-workflow, vanta-security-scaling-guardrails, developer-isolation-blast-radius, static-code-analysis, fable-judge, try-harder-poc-validation
 
-- **shift-left-ai-security**: Enforce the IBM 5 Principles of Shift-Left Security for AI-generated code, agent workflows, and autonomous trading systems. Governs fail-safe execution, pre-commit secrets scanning, supply-chain dependency auditing, business intent validation (50% capital cap), and agentic boundary enclosure.
-  - Path: `/Users/malcolm/.gemini/config/skills/shift-left-ai-security/SKILL.md`
+- **`/code`** (`code`): Use when planning, building, refactoring, debugging, or teaching software systems end-to-end. Combines Fable Method (Steps 0-6), Fable Loop & Domain bundle creation, IBM Context-Aware Coding (6 inputs, 3-move surfacing, U-shaped attention), Surgical Code Craft (Fowler/Beck TDD), 23 CS algorithmic foundations, Cloudflare Workers/DO, B.L.A.S.T., error patterns, and ZPD tutoring.
+  - Path: `.agents/skills/code/SKILL.md`
+  - Runner: `python3 .agents/skills/code/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (11): context-aware-coding, surgical-code-craft, fable-method, fable-loop, fable-domain, cloudflare-os, cs-algorithmic-foundations, blast-master-system, error-handling-patterns, system-optimization-guide, teach
 
-- **vanta-security-scaling-guardrails**: Enterprise-grade security, scaling, and privacy guardrails derived from VantaInc open-source repositories (graphql-query-cost, vanta-mcp-server, claude-grc-engineering). Binds local AI agent execution costs, validates tool payloads with strict schemas, sanitizes prompt injection vectors and PII, benchmarks LRU prompt caches, and audits code for 100% air-gapped local compliance.
-  - Path: `/Users/malcolm/.gemini/config/skills/vanta-security-scaling-guardrails/SKILL.md`
-  - CLI: `vanta-guardrails` or `python3 /Users/malcolm/.gemini/config/scripts/security_scaling_guardrails.py`
-  - Subcommands: `cost-calc`, `schema-validate`, `sanitize-prompt`, `cache-budget`, `audit-privacy`
+- **`/ops`** (`ops`): Use when orchestrating multi-agent swarms, routing MCP/API models (OmniRoute, Composio, Nod, LUMINA, Antigravity), managing meetings and 48-hour follow-up loops, triaging work by energy tier, or aligning human writing style and RBAC safety in one end-to-end pass.
+  - Path: `.agents/skills/ops/SKILL.md`
+  - Runner: `python3 .agents/skills/ops/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (16): agent-harness-v2, agent-systems-unified-skill, autonomous-architect-protocol, delegation-diligence-loop, unified-ai-architecture-and-standards, icm-architect, tri-perspective-collaboration, nod-bridge-ops, omniroute, composio-mcp, unigent, typesafe-ai, skillopt, nod-human-ops, mas_orchestrator, ego-lite
 
-- **verified-release-and-ui-craft**: Unified release-hardening, security-audit, cryptographic-hygiene, and tactile anti-slop UI engineering skill. Combines TruffleHog (v3+), cloudflare/security-audit-skill 6-phase workflow, qybaihe/bla boundary caveats, AES-GCM/Argon2id/SHA-256 separation, and Oil UI / @motion_ui_interface tactile UI craft.
-  - Path: `/Users/malcolm/.gemini/config/skills/verified-release-and-ui-craft/SKILL.md`
-  - CLI: `python3 /Users/malcolm/.gemini/config/skills/verified-release-and-ui-craft/scripts/verified_release_craft.py`
-  - Subcommands: `check-tools`, `sha256-manifest`, `verify-manifest`, `check-crypto-patterns`, `audit-ui-slop`
+- **`/studio`** (`studio`): Use when creating procedural motion graphics, 60s/90s vertical shorts, high-CTR thumbnails, interactive HTML/SVG/Mermaid explainers, Cartesia voiceovers, FaceTime voice calls, or Sol mascot videos. Combines Anti-Slop 5-stage animation, Generative Media Studio, Vision Board, and Brand Tokens.
+  - Path: `.agents/skills/studio/SKILL.md`
+  - Runner: `python3 .agents/skills/studio/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (8): anti-slop-studio, generative-media-studio, multimodal-visual-explainer, cartesia-voice, agent-voice-facetime, social-media-vision-board, brand-identity, sol-ai-sun-agent
 
-- **context-aware-coding**: IBM Technology Context-Aware Coding Framework meshed into Google Gemini & Antigravity IDE. Governs the 6 Agent Inputs (Code, Compact AST Repo Map, Lockfile Dependency Versions, Scoped Test Feedback Loop, GEMINI.md Docs, Developer Intent), the 3-Move Context Surfacing Loop (Interview, Explore & Explain, Plan & Explicit Assumptions), and U-Shaped Attention Context Hygiene.
-  - Path: `/Users/malcolm/.gemini/config/skills/context-aware-coding/SKILL.md`
-  - CLI: `context-aware-coder` or `python3 /Users/malcolm/.gemini/config/scripts/context_aware_coder.py`
-  - Subcommands: `repo-map`, `deps`, `tests`, `interview`, `bundle`, `learn`, `manifest`
+- **`/hw`** (`hw`): Use when designing electronic hardware, custom PCBs, KiCad hierarchical schematics, Gerber/BOM/CPL fab packs, build123d/CadQuery parametric enclosures, or reproducible OS/firmware images. Executes pre-flight tooling -> spec/math -> ERC=0 -> DRC=0 -> ECAD-synced CAD -> pinned SHA256SUMS in one pass.
+  - Path: `.agents/skills/hw/SKILL.md`
+  - Runner: `python3 .agents/skills/hw/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (1): autonomous-hardware-architect
 
+- **`/growth`** (`growth`): Use when executing competitor marketing intelligence, Convergence Weekly v2 newsletter research/drafting, X Phoenix reach optimization, Kit AI tagging/broadcast staging, zero-dependency web scraping, or Charity/Trading social calendars and GoFundMe/Gumroad income-stream telemetry sync in one pass.
+  - Path: `.agents/skills/growth/SKILL.md`
+  - Runner: `python3 .agents/skills/growth/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (11): competitor-marketing-intel, newsletter-writer, phoenix-reach-optimizer, kit-ai-connectors, web-scraping-mcp, content-calendar-agent, social-media-agent, notification-agent, income-stream-sync, monday-trade-post, social-notification-subagent
 
-- **ege2-quantum-epistemics**: Master operational skill for EGE-2 Quantum Epistemic System — 7 evidence tiers, dual-branch Phi/Psi/Sigma cognitive architecture, Anti-Sycophancy (Anti-Glazing) defense, Q-Graph with post-quantum provenance, quantum belief superposition, and QUBO arbitration.
-  - Path: `/Users/malcolm/.gemini/config/skills/ege2-quantum-epistemics/SKILL.md`
+- **`/billing`** (`billing`): Use when designing, integrating, reconciling, auditing, or upgrading Stripe Checkout/Payments, Stripe Connect (charge patterns, onboarding/KYC verification), Stripe Apps, Stripe Projects, Stripe Pay/Directory, or Metronome usage-based billing in one verified pass.
+  - Path: `.agents/skills/billing/SKILL.md`
+  - Runner: `python3 .agents/skills/billing/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (10): stripe-best-practices, stripe-docs, stripe-apps, stripe-directory, stripe-pay, stripe-projects, upgrade-stripe, connect-recommend, connect-required-verification-information, metronome
 
-- **delegation-diligence-loop**: Strategic execution and supervisory loop for AI agent delegation and continuous verification. Implements the Claude Academy Delegation-Diligence 4D framework combined with Fable Method, Agent Harness v2.0 supervision, and TypeSafe System One judgment verification.
-  - Path: `/Users/malcolm/.gemini/config/skills/delegation-diligence-loop/SKILL.md`
+- **`/quant`** (`quant`): Use when auditing trading daemons, validating live/paper risk locks, running Qlib MTS/MTF pipelines, ingesting Alpaca/Robinhood/QuantPad/OpenNews/OnChain market data, sizing AI models, or fine-tuning and deploying local QLoRA/GGUF models via Soup, LUMINA Unsloth, and Ollama in one pass.
+  - Path: `.agents/skills/quant/SKILL.md`
+  - Runner: `python3 .agents/skills/quant/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (8): soup-finetuning-harness, ai-algorithm-distillery, active-trade-allocation, qlib-mts-workflow, quantpad-data-api, opennews-mcp, mcp-fd-and-bracket-audit, trading-bot-auditor
 
-- **harness-engineering**: Applies the principles of Agent Harness v2.0 and Harness Engineering to ensure high stability, automated supervision, security gating, and error correction.
-  - Path: `/Users/malcolm/.gemini/config/plugins/elite-ai-skills-plugin/skills/harness-engineering/SKILL.md`
-
-- **expert-testing-debugging**: Playbooks for writing test scripts, auditing accessibility, running headless audits, and diagnosing client/server-side errors.
-  - Path: `/Users/malcolm/.gemini/config/plugins/elite-ai-skills-plugin/skills/expert-testing-debugging/SKILL.md`
-
-- **ui-pro-max**: Guide for premium, dopamine-inducing UI design. Focuses on HSL color harmony, glassmorphism, micro-animations, typography, and responsive layouts.
-  - Path: `/Users/malcolm/.gemini/config/plugins/elite-ai-skills-plugin/skills/ui-pro-max/SKILL.md`
-
-- **subagent-orchestration**: Guidelines for defining, launching, communicating with, and managing background subagents to coordinate complex tasks.
-  - Path: `/Users/malcolm/.gemini/config/plugins/elite-ai-skills-plugin/skills/subagent-orchestration/SKILL.md`
-
-- **social-media-vision-board**: Social Media Vision Board & High-Engagement Content Playbook for Quant, Trading, Crypto, and Options content generation. Enforces dark mode styling, curiosity hooks, visual asset archetypes, weekly content calendars, and mandatory NFA/SEC legal disclaimers.
-  - Path: `/Users/malcolm/.gemini/config/skills/social-media-vision-board/SKILL.md`
-
-- **generative-media-studio**: Multi-modal generative media studio for AI agents. Generates full 60s/90s vertical short videos, high-CTR thumbnails, voiceovers, video clipping/shorts creation, and social syndication packages.
-  - Path: `/Users/malcolm/.gemini/config/skills/generative-media-studio/SKILL.md`
-
-- **web-scraping-mcp**: Practical web scraping workflows with no paid APIs and zero third-party Python dependencies. Exposes search_sources, scrape_page, extract_links, extract_json_ld, extract_table, and crawl_site tools.
-  - Path: `/Users/malcolm/.gemini/config/skills/web-scraping-mcp/SKILL.md`
-
-- **skillopt**: Self-evolving skill optimization framework for AI agents based on Microsoft SkillOpt and OKF (Observable Knowledge Framework) standards. Optimizes natural-language SKILL.md documents using trajectory reflection, patch aggregation, bounded editing, and validation gating without model fine-tuning.
-  - Path: `/Users/malcolm/.gemini/config/skills/skillopt/SKILL.md`
-
-- **robinhood-for-agents**: Complete Robinhood programmatic trading and portfolio management suite for stocks, options, and crypto with real-time Greeks, order placement, and scanner support.
-  - Path: `/Users/malcolm/.gemini/config/skills/robinhood-for-agents/SKILL.md`
-
-- **bigquery**: BigQuery query optimization (SQL), BigFrames Python code, BigQuery ML/AI functions (SQL & Python), and Graph Analytics (GQL & Property Graphs).
-  - Path: `/Users/malcolm/.gemini/config/skills/bigquery/SKILL.md`
-
-- **firestore-data**: NoSQL document operations, collection hierarchy exploration, CRUD tasks, and data retrieval.
-  - Path: `/Users/malcolm/.gemini/config/skills/firestore-data/SKILL.md`
+- **`/research`** (`research`): Use when conducting deep source-verified research, reverse engineering binaries/Electron/JS/firmware with REA (170+ tools), enforcing EGE-2 7-tier epistemic truth & Q-Graph arbitration, auditing math proofs, solving ARC-AGI-3 grids, running Daily AI Intel digests, or extracting GitHub/YouTube tools.
+  - Path: `.agents/skills/research/SKILL.md`
+  - Runner: `python3 .agents/skills/research/scripts/run_master_skill.py --dry-run --json`
+  - Preserved Modules (8): rea, reverse-engineer-anything, ege2-quantum-epistemics, epistemic-math-frontier, arc-agi-3-interactive-reasoning, daily-ai-intel-digest, technical-learning-workflow, nod-research
 </skills>
