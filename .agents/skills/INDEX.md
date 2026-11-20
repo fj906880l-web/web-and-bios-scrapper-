@@ -13,6 +13,11 @@
   - CLI: `vanta-guardrails` or `python3 /Users/malcolm/.gemini/config/scripts/security_scaling_guardrails.py`
   - Subcommands: `cost-calc`, `schema-validate`, `sanitize-prompt`, `cache-budget`, `audit-privacy`
 
+- **verified-release-and-ui-craft**: Unified release-hardening, security-audit, cryptographic-hygiene, and tactile anti-slop UI engineering skill. Combines TruffleHog (v3+), cloudflare/security-audit-skill 6-phase workflow, qybaihe/bla boundary caveats, AES-GCM/Argon2id/SHA-256 separation, and Oil UI / @motion_ui_interface tactile UI craft.
+  - Path: `/Users/malcolm/.gemini/config/skills/verified-release-and-ui-craft/SKILL.md`
+  - CLI: `python3 /Users/malcolm/.gemini/config/skills/verified-release-and-ui-craft/scripts/verified_release_craft.py`
+  - Subcommands: `check-tools`, `sha256-manifest`, `verify-manifest`, `check-crypto-patterns`, `audit-ui-slop`
+
 - **context-aware-coding**: IBM Technology Context-Aware Coding Framework meshed into Google Gemini & Antigravity IDE. Governs the 6 Agent Inputs (Code, Compact AST Repo Map, Lockfile Dependency Versions, Scoped Test Feedback Loop, GEMINI.md Docs, Developer Intent), the 3-Move Context Surfacing Loop (Interview, Explore & Explain, Plan & Explicit Assumptions), and U-Shaped Attention Context Hygiene.
   - Path: `/Users/malcolm/.gemini/config/skills/context-aware-coding/SKILL.md`
   - CLI: `context-aware-coder` or `python3 /Users/malcolm/.gemini/config/scripts/context_aware_coder.py`
